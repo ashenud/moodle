@@ -1,0 +1,53 @@
+.btn-success,
+.btn-success:hover {
+    color: #fff;
+    background-color: #8cc168;
+    border-color: #8cc168;;
+}
+
+.btn-sheding {
+    color: #454545;
+    background-color: #9db48d !important;
+}
+
+.btn-disabled {
+    background-color: #959893 !important;
+    cursor: not-allowed !important;
+}
+
+.btn-deleted {
+    background-color: #4a4949;
+    color: #fff7f7;
+}
+
+.btn-deleted:hover {
+    color: #ffffff;
+}
+
+.btn-primary-custom,
+.btn-primary-custom:hover {
+    color: #fff;
+    background-color: #8cc168 !important;
+}
+
+.btn-secondory-custom,
+.btn-secondory-custom:hover {
+    color: #fff;
+    background-color: #14280e8f !important;
+}
+
+.btn-add-floating {
+    background-color: #8cc168;
+    position: fixed;
+    bottom: 65px;
+    right: 30px;
+    z-index: 101;
+    font-size: 22px;
+}
+
+.btn-add-floating.focus, 
+.btn-add-floating:focus, 
+.btn-add-floating:hover {
+    color: #fff;
+    background-color:#8cc168 !important;
+}

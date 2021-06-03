@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/english-fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Helvetica;
+  src: url(../fonts/english-fonts/Helvetica-Neue.otf);
+}
+@font-face {
+  font-family: Playfair;
+  src: url(../fonts/english-fonts/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: Vidaloka;
+  src: url(../fonts/english-fonts/Vidaloka-Regular.ttf);
+}

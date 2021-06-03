@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+body { margin-top: 3%; }
+
+.calendar, .calendar_weekdays, .calendar_content {
+    max-width: 300px;
+}
+.calendar {
+    padding: 10px 15px;
+    margin: auto;
+    font-family:'Muli', sans-serif;
+    font-weight: 400;
+}
+.calendar_content, .calendar_weekdays, .calendar_header {
+    position: relative;
+    overflow: hidden;
+}
+.calendar_weekdays div {
+    display:inline-block;
+    vertical-align:top;
+    color:#00c298 !important;
+    font-size: 12px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+.calendar_weekdays div, .calendar_content div {
+    width: 14.28571%;
+    overflow: hidden;
+    text-align: center;
+    background-color: transparent;
+    color: #0e0c0c;
+    font-size: 12px;
+}
+.calendar_content div {
+    border: 1px solid transparent;
+    float: left;
+}
+.calendar_content div:hover {
+    background-color: rgba(0, 0, 0, .07);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.calendar_content div.blank:hover {
+    cursor: default;
+    border-radius: 50px;
+    border: 1px solid transparent;
+}
+.calendar_content div.past-date {
+    color:rgba(0, 0, 0, .5);
+}
+.calendar_content div.today {
+    font-weight: bold;
+    font-size: 12px;
+    color: #fff !important;
+    border-radius: 50px;
+    background: #ffd400;
+}
+.calendar_content div.selected {
+    background-color: #00c298;
+    border-radius: 50px;
+}
+.calendar_content div.selected:hover {
+    border-radius: 50px;
+}
+.calendar_header {
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.calendar_header h2 {
+    font-family:'Muli', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: auto;
+    color: #4d4d4d;
+    width:70%;
+}
+
+button.switch-month {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #00c298;
+    width:8%;
+    transition: color .2s;    
+    font-size: 12px;
+}
+button.switch-month :hover {
+    color: #1d2412;   
+}
