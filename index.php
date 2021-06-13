@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
 <head>
@@ -18,19 +19,22 @@
 
     <!--css files-->
     <link rel="stylesheet" href="/assets/css/mdb.min.css">
+    <link rel="stylesheet" href="/assets/css/select2.min.css">
+    <link rel="stylesheet" href="/assets/datepicker/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="/assets/css/index-style.css">
     <link rel="stylesheet" href="/assets/css/common-style.css">
 
     <!--js files-->
-    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
     <script type="text/javascript" src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
     <script type="text/javascript" src="/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="/assets/datepicker/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="/assets/sweetalert/sweetalert2.all.js"></script>
 
     <title>LERNING MANAGEMENT SYSTEM</title>
 
 </head>
-<body>
+<body class="index-body">
    
     <div class="form-section rgba-stylish-strong h-100 d-flex justify-content-center align-items-center" style="height: 100% !important;">
         <div class="container">
@@ -52,19 +56,21 @@
                                 </div>
 
                                 <input type="submit" name="login" id="submit-user" class="btn btn-lg btn-success btn-block" value="Sign in" />
+                                <div class="click-here-area">
+                                    <a href="/register.php" class="click-here">click here to register</a>
+                                </div>
                             </form>                            
                         </div>
                     </div>
                     <!--/Form with header-->
-
                 </div>
             </div>
         </div>
     </div>
 
-    <!--top footer-->
+    <!--top alerts-->
     <?php include './inc/include-alerts.php';?>
-    <!--end of footer-->
+    <!--end of alerts-->
 
 </body>
 </html>

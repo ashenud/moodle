@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+// session_start();
 if(isset($_SESSION["flash_type"]) && isset($_SESSION["flash_message"])) {
 
     ?> 
@@ -17,5 +16,4 @@ if(isset($_SESSION["flash_type"]) && isset($_SESSION["flash_message"])) {
     unset($_SESSION["flash_message"]);
 
 }
-
 ?>

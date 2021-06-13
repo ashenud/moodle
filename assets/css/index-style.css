@@ -1,8 +1,11 @@
 .view,
 body,
 html {
-    height: 100vh;
     font-family: Nunito;
+}
+
+body.index-body {
+    height: 100vh;
 }
 
 body {
@@ -16,6 +19,7 @@ body {
     margin-top: 30px
 }
 
+textarea,
 input {
     border: 1px solid #fff !important;
 }
@@ -25,11 +29,65 @@ input::placeholder {
 }
 
 .form-label {
-    color: #fff;
+    color: #f3ffeb;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 a {
     color: #fff
+}
+
+.form-check-input[type=radio]:after {
+    margin-top: 1px;
+}
+.form-check-input[type=radio]:after,
+.form-check-input[type=radio]:checked:focus,
+.form-check-input,
+.form-check-input[type=radio]:checked {
+    background-color: #757575;
+}
+.form-check-input[type=radio]:checked:after {
+    background-color: #8cc168;
+    margin-top: 0.2275rem;
+    margin-left: 0.2375rem;
+}
+.form-check-input:checked:focus:before {
+    -webkit-box-shadow: 0 0 0 13px #8cc168;
+    box-shadow: 0 0 0 13px #8cc168;
+}
+.form-check-label {
+    color: #fff;
+}
+
+.nav-item {
+    margin: 5px;
+}
+.nav-tabs .nav-link {
+    color: #fff;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #8cc168;
+    color: #ffffff;
+    border-color: #8cc168;
+    border-radius: 5px;
+}
+.nav-tabs .nav-link:hover {
+    border-radius: 5px;
+    color: #000;
+}
+
+.click-here-area {
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.click-here {
+    text-decoration: none;
 }
 
 :-webkit-autofill,
@@ -42,16 +100,132 @@ a {
     font-weight: 300 !important
 }
 
+.select2-selection.select2-selection--single {
+    border: 1px solid #fff;
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: .25rem;
+    height: 38.15px;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    color: #fff;
+    border-radius: 50px;
+    background-color: #757575
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #98ca77;
+    color: #fff;
+    border-radius: 50px;
+}
+.select2-results__option {
+    margin: 5px;
+    padding: 6px;
+    color: #fff;
+}
+.select2-selection__rendered {
+    margin: 5px;
+    color: #fff !important;
+}
+.select2-dropdown {
+    background-color: rgb(165 165 165);
+}
+/* scrollbar */
+.select2-results__options::-webkit-scrollbar {
+    width: 6px;
+}
+  
+.select2-results__options::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.select2-results__options::-webkit-scrollbar-thumb {
+    background: #b2b1b1;; 
+    border-radius: 6px;
+}
+.select2-results__options::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.datepicker-dropdown {
+    padding: 5px 15px;
+    background-color: #757575;
+}
+.datepicker table tr td, .datepicker table tr th {
+    color: #424242;
+}
+.datepicker-centuries .century,
+.datepicker-decades .decade,
+.datepicker-years .year,
+.datepicker-months .month,
+.datepicker-days .day {
+    color: #fff;
+}
+
+
+.datepicker-centuries .century.focused,
+.datepicker-decades .decade.focused,
+.datepicker-years .year.focused,
+.datepicker-months .month.focused {
+    background: #4c4c4c;
+    color: #fff;
+}
+
+.datepicker-centuries .century.active,
+.datepicker-decades .decade.active,
+.datepicker-years .year.active,
+.datepicker-months .month.active,
+.datepicker-days .active.day {
+    background-color: #8cc1687d !important;
+}
+.datepicker-centuries .old.century, .datepicker-centuries .new.century, .datepicker-centuries .disabled.century,
+.datepicker-decades .old.decade, .datepicker-decades .new.decade, .datepicker-decades .disabled.decade,
+.datepicker-years .old.year, .datepicker-years .new.year, .datepicker-years .disabled.year,
+.datepicker-months .old.month, .datepicker-months .new.month, .datepicker-months .disabled.month,
+.datepicker-days .old.day, .datepicker-days .new.day, .datepicker-days .disabled.day {
+    color: #adadad;
+}
+.datepicker table tr td span.focused, .datepicker table tr td span:hover,
+.datepicker .datepicker-switch:hover, .datepicker .next:hover, .datepicker .prev:hover, .datepicker tfoot tr th:hover,
+.datepicker table tr td.day:hover, .datepicker table tr td.focused {
+    background: #4c4c4c;
+    color: #fff;
+}
+.datepicker table tr td span.disabled, .datepicker table tr td span.disabled:hover {
+    color: #adadad;
+}
+.datepicker-centuries .disabled.century:hover,
+.datepicker-decades .disabled.decade:hover,
+.datepicker-years .disabled.year:hover,
+.datepicker-months .disabled.month:hover,
+.datepicker-days .disabled.day:hover {
+    cursor: not-allowed;
+    background: transparent;
+    color: #adadad;
+}
+
+.invalid-feedback {
+    position: fixed;
+    margin-top: 1px;
+    text-transform: lowercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c50023;
+}
+.is-invalid.form-control {
+    margin: 0;
+    margin-top: 1px;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    border-color: #c50023 !important;
+}
+
 @media (max-width:740px) {
-    body,
-    html {
+    body.index-body {
         height: 815px
     }
 }
 
 @media (min-width:800px) and (max-width:850px) {
-    body,
-    html {
+    body.index-body {
         height: 650px
     }
 }

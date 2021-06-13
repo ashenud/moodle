@@ -1,8 +1,8 @@
 .btn-success,
 .btn-success:hover {
     color: #fff;
-    background-color: #8cc168;
-    border-color: #8cc168;;
+    background-color: #8cc168 !important;
+    border-color: #8cc168 !important;
 }
 
 .btn-sheding {
