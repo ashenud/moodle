@@ -1,20 +1,21 @@
-<?php session_start(); ?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php 
+    error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+    session_start();
+?>
 
-    <!-- favicon -->
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'>
+
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
     <!--fonts and icons-->
-    <!--fonts and icons-->
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
-    <link rel="stylesheet" href="/assets/css/english-fonts.css">
-    <link rel="stylesheet" href="/assets/css/material-icons.css">
-    <link rel="stylesheet" href="/assets/css/now-ui-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!--css files-->
@@ -24,18 +25,12 @@
     <link rel="stylesheet" href="/assets/css/index-style.css">
     <link rel="stylesheet" href="/assets/css/common-style.css">
 
-    <!--js files-->
-    <script type="text/javascript" src="/assets/js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
-    <script type="text/javascript" src="/assets/js/select2.min.js"></script>
-    <script type="text/javascript" src="/assets/datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="/assets/sweetalert/sweetalert2.all.js"></script>
-
     <title>LERNING MANAGEMENT SYSTEM</title>
-
+    
 </head>
+
 <body>
-   
+
     <div class="form-section rgba-stylish-strong h-100 d-flex justify-content-center align-items-center" style="height: 100% !important;">
         <div class="container">
             <div class="row">
@@ -61,23 +56,23 @@
                                     <form action="/php/register.php" id="std_form" name="std_form" method="POST">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_fname">First name</label>
                                                     <input type="text" id="std_fname" name="std_fname" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">Please provide a valid first name.</div>
                                                 </div>
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_lname">Last name</label>
                                                     <input type="text" id="std_lname" name="std_lname" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">Please provide a valid last name.</div>
                                                 </div>
 
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_dob">Date of birth</label>
                                                     <input type="text" id="std_dob" name="std_dob" autocomplete="off" class="form-control datepicker-common-class" />
                                                     <div class="invalid-feedback">Please provide a valid date of birth.</div>
                                                 </div>
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_gender">Gender</label>
                                                     <div class="mt-2">
                                                         <div class="form-check form-check-inline">
@@ -92,43 +87,43 @@
                                                     <div class="invalid-feedback">Please provide a valid gender.</div>
                                                 </div>
 
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_mobile">Mobile</label>
                                                     <input type="text" id="std_mobile" name="std_mobile" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">Please provide a valid mobile number.</div>
                                                 </div>
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_email">Email</label>
                                                     <input type="email" id="std_email" name="std_email" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">Please provide a valid email.</div>
                                                 </div>
 
-                                                <div class="form-outline col-12 form-white mb-4">
+                                                <div class="form-group col-12 form-white mb-4">
                                                     <label class="form-label" for="std_address">Address</label>
                                                     <input type="text" id="std_address" name="std_address" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">Please provide a valid address.</div>
                                                 </div>
 
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_username">User name</label>
                                                     <input type="text" id="std_username" name="std_username" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">Please provide a valid username.</div>
                                                     <input type="hidden" id="std_uname_chk" value="1"/>
                                                 </div>
-                                                <div class="form-outline col-md-6 form-white mb-4"></div>
+                                                <div class="form-group col-md-6 form-white mb-4"></div>
 
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_password">Password</label>
                                                     <input type="password" id="std_password" name="std_password" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">Please provide a valid passord.</div>
                                                 </div>
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_confirm_password">Confirm Password</label>
                                                     <input type="password" id="std_confirm_password" name="std_confirm_password" autocomplete="off" class="form-control" />
                                                     <div class="invalid-feedback">passwords dose not match.</div>
                                                 </div>
                                                 
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_al_stream">AL stream</label>
                                                     <div class="mt-2">
                                                         <div class="form-check form-check-inline">
@@ -142,7 +137,7 @@
                                                     </div>
                                                     <div class="invalid-feedback">Please provide a valid al stream.</div>
                                                 </div>
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_uni_stream">University stream</label>
                                                     <div class="mt-2">
                                                         <div class="form-check form-check-inline">
@@ -157,7 +152,7 @@
                                                     <div class="invalid-feedback">Please provide a valid university stream.</div>
                                                 </div>
 
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_ol_eng_result">OL english result</label>
                                                     <select name="std_ol_eng_result" id="std_ol_eng_result" class="form-control select2-common-class">
                                                         <option value="0">SELECT RESULT</option>
@@ -169,7 +164,7 @@
                                                     </select>
                                                     <div class="invalid-feedback">Please provide a valid result.</div>
                                                 </div>
-                                                <div class="form-outline col-md-6 form-white mb-4">
+                                                <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_al_eng_result">AL english result</label>                                                  
                                                     <select name="std_al_eng_result" id="std_al_eng_result" class="form-control select2-common-class">
                                                         <option value="0">SELECT RESULT</option>
@@ -182,7 +177,7 @@
                                                     <div class="invalid-feedback">Please provide a valid result.</div>
                                                 </div>
 
-                                                <div class="form-outline form-white mb-4">
+                                                <div class="form-group form-white mb-4">
                                                     <input type="hidden" id="std_register_type" name="register_type" value="2" />
                                                     <input type="button" id="std_submit_data" class="btn btn-lg btn-success btn-block" value="SAVE" onclick="submit_student_data(event,this.id,'std_form')"/>
                                                 </div>
@@ -208,6 +203,15 @@
         </div>
     </div>
 
+    <!-- optional JavaScript -->
+    <script type="text/javascript" src="/assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+    <script type="text/javascript" src="/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="/assets/datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="/assets/sweetalert/sweetalert2.all.js"></script>
+   
+    <!-- writed scripts -->     
+
     <!--top alerts-->
     <?php include './inc/include-alerts.php';?>
     <!--end of alerts-->
@@ -220,6 +224,15 @@
         $('.datepicker-common-class').datepicker({
             endDate: new Date(),
             format: 'yyyy-mm-dd',
+        });
+        $(".password-icon").click(function () {    
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
         });
 
         function validate_student_form() {
@@ -373,6 +386,10 @@
 
 
     </script>
+    <!-- end of writed scripts -->
+
+
 
 </body>
+
 </html>
