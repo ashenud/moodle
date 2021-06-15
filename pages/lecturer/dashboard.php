@@ -9,8 +9,6 @@
     include('../../inc/dashboard/include-fav.php');
     //css
     include('../../inc/dashboard/include-css.php');
-    //js
-    include('../../inc/dashboard/include-js.php');
     ?>
 
     <title>LERNING MANAGEMENT SYSTEM</title>
@@ -47,6 +45,11 @@
     <!--sidebar-->
     <?php include '../../layouts/sidebars/lecturer.php';?>
     <!--end of sidebar-->
+
+    <?php 
+    //js
+    include('../../inc/dashboard/include-js.php');
+    ?>
 
     <script>
         $(function() {

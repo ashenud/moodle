@@ -4,8 +4,9 @@ html {
     font-family: Nunito;
 }
 
-body.index-body {
-    height: 100vh;
+body.index-body,
+body.index-body.swal2-height-auto {
+    height: 100vh !important;
 }
 
 body {
@@ -28,6 +29,7 @@ input::placeholder {
 }
 .form-control {
     background: transparent;
+    color: #f3f3f3;
 }
 .form-control:focus {
     color: #fff;
@@ -68,6 +70,15 @@ a {
 .form-check-label {
     color: #fff;
 }
+.password-icon {
+    float: right;
+    margin-right: 10px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 3;
+    font-size: 14px;
+    color: #8cc168;
+}
 
 .nav-item {
     margin: 5px;
@@ -105,6 +116,7 @@ a {
     transition: all 5000s ease-in-out 0s;
     transition-property: background-color, color;
     -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px#929295 inset;
     font-weight: 300 !important
 }
 
@@ -211,17 +223,21 @@ a {
 }
 
 .invalid-feedback {
-    position: fixed;
     margin-top: 1px;
     text-transform: lowercase;
     font-size: 12px;
     font-weight: bold;
     color: #c50023;
 }
+.show-feedback {
+    display: block;
+    position: absolute;
+}
 .is-invalid.form-control {
     margin: 0;
     margin-top: 1px;
 }
+.is-invalid,
 .form-control.is-invalid, .was-validated .form-control:invalid {
     border-color: #c50023 !important;
 }

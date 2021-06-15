@@ -84,7 +84,7 @@
                                                             <label class="form-check-label" for="std_gender_2">Female</label>
                                                         </div>
                                                     </div>
-                                                    <div class="invalid-feedback">Please provide a valid gender.</div>
+                                                    <div class="invalid-feedback" id="std_gender_invalid_fbk">Please provide a valid gender.</div>
                                                 </div>
 
                                                 <div class="form-group col-md-6 form-white mb-4">
@@ -106,21 +106,25 @@
 
                                                 <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_username">User name</label>
-                                                    <input type="text" id="std_username" name="std_username" autocomplete="off" class="form-control" />
-                                                    <div class="invalid-feedback">Please provide a valid username.</div>
-                                                    <input type="hidden" id="std_uname_chk" value="1"/>
+                                                    <input type="text" id="std_username" name="std_username" autocomplete="off" class="form-control" onkeyup="check_username_validity(event)" />
+                                                    <div class="invalid-feedback" id="std_uname_invalid_fbk">Please provide a valid username.</div>
+                                                    <input type="hidden" id="std_uname_chk" value="0"/>
                                                 </div>
                                                 <div class="form-group col-md-6 form-white mb-4"></div>
 
                                                 <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_password">Password</label>
-                                                    <input type="password" id="std_password" name="std_password" autocomplete="off" class="form-control" />
-                                                    <div class="invalid-feedback">Please provide a valid passord.</div>
+                                                    <input type="password" id="std_password" name="std_password" autocomplete="off" class="form-control" onkeyup="check_password_validity(event)" />
+                                                    <span class="focus-input" data-placeholder="&#xf191;"></span>
+                                                    <span toggle="#std_password" class="far fa-fw fa-eye password-icon"></span>
                                                 </div>
                                                 <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_confirm_password">Confirm Password</label>
-                                                    <input type="password" id="std_confirm_password" name="std_confirm_password" autocomplete="off" class="form-control" />
+                                                    <input type="password" id="std_confirm_password" name="std_confirm_password" autocomplete="off" class="form-control" onkeyup="check_password_validity(event)" />
+                                                    <span class="focus-input" data-placeholder="&#xf191;"></span>
+                                                    <span toggle="#std_confirm_password" class="far fa-fw fa-eye password-icon"></span>
                                                     <div class="invalid-feedback">passwords dose not match.</div>
+                                                    <input type="hidden" id="std_password_chk" value="0"/>
                                                 </div>
                                                 
                                                 <div class="form-group col-md-6 form-white mb-4">
@@ -135,7 +139,7 @@
                                                             <label class="form-check-label" for="std_al_stream_2">English</label>
                                                         </div>
                                                     </div>
-                                                    <div class="invalid-feedback">Please provide a valid al stream.</div>
+                                                    <div class="invalid-feedback" id="std_al_stream_invalid_fbk">Please provide a valid al stream.</div>
                                                 </div>
                                                 <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_uni_stream">University stream</label>
@@ -149,7 +153,7 @@
                                                             <label class="form-check-label" for="std_uni_stream_2">English</label>
                                                         </div>
                                                     </div>
-                                                    <div class="invalid-feedback">Please provide a valid university stream.</div>
+                                                    <div class="invalid-feedback" id="std_uni_stream_invalid_fbk">Please provide a valid university stream.</div>
                                                 </div>
 
                                                 <div class="form-group col-md-6 form-white mb-4">
@@ -162,7 +166,7 @@
                                                         <option value="S">S</option>
                                                         <option value="F">F</option>
                                                     </select>
-                                                    <div class="invalid-feedback">Please provide a valid result.</div>
+                                                    <div class="invalid-feedback" id="std_ol_result_fbk">Please provide a valid result.</div>
                                                 </div>
                                                 <div class="form-group col-md-6 form-white mb-4">
                                                     <label class="form-label" for="std_al_eng_result">AL english result</label>                                                  
@@ -174,7 +178,7 @@
                                                         <option value="S">S</option>
                                                         <option value="F">F</option>
                                                     </select>
-                                                    <div class="invalid-feedback">Please provide a valid result.</div>
+                                                    <div class="invalid-feedback" id="std_al_result_fbk">Please provide a valid result.</div>
                                                 </div>
 
                                                 <div class="form-group form-white mb-4">
@@ -190,7 +194,103 @@
                                     </form>
                                 </div>
                                 <div class="tab-pane fade" id="ex2-lecturer-tab" role="tabpanel" aria-labelledby="lecturer-tab">
-                                
+                                    <form action="/php/register.php" id="ltr_form" name="ltr_form" method="POST">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_fname">First name</label>
+                                                    <input type="text" id="ltr_fname" name="ltr_fname" autocomplete="off" class="form-control" />
+                                                    <div class="invalid-feedback">Please provide a valid first name.</div>
+                                                </div>
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_lname">Last name</label>
+                                                    <input type="text" id="ltr_lname" name="ltr_lname" autocomplete="off" class="form-control" />
+                                                    <div class="invalid-feedback">Please provide a valid last name.</div>
+                                                </div>
+
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_dob">Date of birth</label>
+                                                    <input type="text" id="ltr_dob" name="ltr_dob" autocomplete="off" class="form-control datepicker-common-class" />
+                                                    <div class="invalid-feedback">Please provide a valid date of birth.</div>
+                                                </div>
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_gender">Gender</label>
+                                                    <div class="mt-2">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="ltr_gender" id="ltr_gender_1" value="1" />
+                                                            <label class="form-check-label" for="ltr_gender_1">Male</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline"> 
+                                                            <input class="form-check-input" type="radio" name="ltr_gender" id="ltr_gender_2" value="2" />
+                                                            <label class="form-check-label" for="ltr_gender_2">Female</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="invalid-feedback" id="ltr_gender_invalid_fbk">Please provide a valid gender.</div>
+                                                </div>
+
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_mobile">Mobile</label>
+                                                    <input type="text" id="ltr_mobile" name="ltr_mobile" autocomplete="off" class="form-control" />
+                                                    <div class="invalid-feedback">Please provide a valid mobile number.</div>
+                                                </div>
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_email">Email</label>
+                                                    <input type="email" id="ltr_email" name="ltr_email" autocomplete="off" class="form-control" />
+                                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                                </div>
+
+                                                <div class="form-group col-12 form-white mb-4">
+                                                    <label class="form-label" for="ltr_address">Address</label>
+                                                    <input type="text" id="ltr_address" name="ltr_address" autocomplete="off" class="form-control" />
+                                                    <div class="invalid-feedback">Please provide a valid address.</div>
+                                                </div>
+
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_username">User name</label>
+                                                    <input type="text" id="ltr_username" name="ltr_username" autocomplete="off" class="form-control" onkeyup="check_username_validity(event)" />
+                                                    <div class="invalid-feedback" id="ltr_uname_invalid_fbk">Please provide a valid username.</div>
+                                                    <input type="hidden" id="ltr_uname_chk" value="0"/>
+                                                </div>
+                                                <div class="form-group col-md-6 form-white mb-4"></div>
+
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_password">Password</label>
+                                                    <input type="password" id="ltr_password" name="ltr_password" autocomplete="off" class="form-control" onkeyup="check_password_validity(event)" />
+                                                    <span class="focus-input" data-placeholder="&#xf191;"></span>
+                                                    <span toggle="#ltr_password" class="far fa-fw fa-eye password-icon"></span>
+                                                </div>
+                                                <div class="form-group col-md-6 form-white mb-4">
+                                                    <label class="form-label" for="ltr_confirm_password">Confirm Password</label>
+                                                    <input type="password" id="ltr_confirm_password" name="ltr_confirm_password" autocomplete="off" class="form-control" onkeyup="check_password_validity(event)" />
+                                                    <span class="focus-input" data-placeholder="&#xf191;"></span>
+                                                    <span toggle="#ltr_confirm_password" class="far fa-fw fa-eye password-icon"></span>
+                                                    <div class="invalid-feedback">passwords dose not match.</div>
+                                                    <input type="hidden" id="ltr_password_chk" value="0"/>
+                                                </div>
+                                                
+                                                <div class="form-group col-12 form-white mb-4">
+                                                    <label class="form-label" for="ltr_specialized">Specialized Field</label>
+                                                    <input type="text" id="ltr_specialized" name="ltr_specialized" autocomplete="off" class="form-control" />
+                                                    <div class="invalid-feedback">Please provide a specialized field.</div>
+                                                </div>
+                                                
+                                                <div class="form-group col-12 form-white mb-4">
+                                                    <label class="form-label" for="ltr_university">University</label>
+                                                    <input type="text" id="ltr_university" name="ltr_university" autocomplete="off" class="form-control" />
+                                                    <div class="invalid-feedback">Please provide a valid university.</div>
+                                                </div>
+
+                                                <div class="form-group form-white mb-4">
+                                                    <input type="hidden" id="ltr_register_type" name="register_type" value="1" />
+                                                    <input type="button" id="ltr_submit_data" class="btn btn-lg btn-success btn-block" value="SAVE" onclick="submit_lecturer_data(event,this.id,'ltr_form')"/>
+                                                </div>
+
+                                                <div class="click-here-area">
+                                                    <a href="/index.php" class="click-here">If you are already registerd click here to sign in</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <!-- Tabs content -->                          
@@ -235,155 +335,246 @@
             }
         });
 
+        function check_username_validity(event) {
+            var id = event.target.id;
+            var user = id.split("_");
+            var user_type = user[0];
+            var username = event.target.value;
+
+            $.ajax({
+                url: "php/user-username-ckeck.php",
+                method: "POST",
+                data: { username: username }
+            })
+            .done(function (data) {
+                if(data == 1) {                    
+                    $('#'+user_type+'_uname_invalid_fbk').html("user name you enterd is already exist");
+                    $('#'+user_type+'_uname_invalid_fbk').show();
+                    $('#'+user_type+'_uname_chk').val(0);
+                    $('#'+user_type+'_username').addClass("is-invalid");
+                }
+                else {
+                    $('#'+user_type+'_uname_invalid_fbk').html("Please provide a valid username.");
+                    $('#'+user_type+'_uname_invalid_fbk').hide();
+                    $('#'+user_type+'_uname_chk').val(1);
+                    $('#'+user_type+'_username').removeClass("is-invalid");              
+                }
+            });
+                    
+        }
+
+        function check_password_validity(event) {
+            var id = event.target.id;
+            var user = id.split("_");
+            var user_type = user[0];
+            var password = $('#'+user_type+'_password').val();
+            var confirm_password = $('#'+user_type+'_confirm_password').val();
+
+            if(confirm_password != "") {
+                if(password != confirm_password) {
+                    $('#'+user_type+'_password_chk').val(0);
+                    $('#'+user_type+'_confirm_password').addClass("is-invalid");
+                }
+                else {
+                    $('#'+user_type+'_password_chk').val(1);
+                    $('#'+user_type+'_password').removeClass("is-invalid");
+                    $('#'+user_type+'_confirm_password').removeClass("is-invalid");
+                }
+            }
+                    
+        }
+
         function validate_student_form() {
 
-                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                var mobPattern = /^[0-9]{10}$/;
+            var email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            var mobile_pattern1 = /^[0-9]{10}$/;
+            var mobile_pattern2 = /^[+]+[0-9]{11}$/;
+            var date_pattern = /^\d{4}-\d{2}-\d{2}$/;
+            var gender =document.getElementsByName('std_gender');
+            var al_stream =document.getElementsByName('std_al_stream');
+            var uni_stream =document.getElementsByName('std_uni_stream');
 
-                valid = true;
-                if ($('#std_fname').val() == "") {
-                    valid = false;
-                    $('#std_fname').addClass("is-invalid");
-                    $('#std_fname').focus();
-                } 
-                // else if (std_lname.value == "") {
-                //     valid = false;
-                //     std_fname.removeClass("is-invalid");
-                //     std_lname.addClass("is-invalid");
-                //     std_lname.focus();
-                // } else if (nic.value == "") {
-                //     valid = false;
-                //     alert("Enter NIC Number");
-                //     nic.focus();
-                // } else if (address_line_2.value == "") {
-                //     valid = false;
-                //     alert("Enter Valid Street Name");
-                //     address_line_2.focus();
-                // } else if (address_line_3.value == "") {
-                //     valid = false;
-                //     alert("Enter Valid Town Name");
-                //     address_line_3.focus();
-                // } else if (address_line_4.value == "") {
-                //     valid = false;
-                //     alert("Enter Valid City Name");
-                //     address_line_4.focus();
-                // } else if (mob.value == "") {
-                //     valid = false;
-                //     alert("Enter Mobile Number");
-                //     mob.focus();
-                // } else if (!mobPattern.test(mob.value)) {
-                //     valid = false;
-                //     alert("Mobile number length must be 10 numbers");
-                //     mob.focus();
-                // } else if (tel.value != "" && !mobPattern.test(tel.value)) {
-                //     valid = false;
-                //     alert("Telephone number length must be 10 numbers");
-                //     tel.focus();
-                // } else if (!emailPattern.test(email.value)) {
-                //     valid = false;
-                //     alert("Enter Valid Email Address");
-                //     email.focus();
-                // } else if (gender.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select Gender");
-                //     gender.focus();
-                // } else if (prefix.value != "" && prefix.value.length > 10) {
-                //     valid = false;
-                //     alert("Prefix length must be shorter than 10 characters");
-                //     prefix.focus();
-                // } else if (u_type.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select User Type");
-                //     u_type.focus();
-                // } else if ((u_type.value == "7") && (region_tr_id.selectedIndex == 0)) {
-                //     valid = false;
-                //     alert("Select Region");
-                //     region_tr_id.focus();
-                // } else if ((u_type.value == "3") && (region_tr_id.selectedIndex == 0)) {
-                //     valid = false;
-                //     alert("Select Region");
-                //     region_tr_id.focus();
-                // } else if ((u_type.value == "2") && (region_tr_id.selectedIndex == 0)) {
-                //     valid = false;
-                //     alert("Select Region");
-                //     region_tr_id.focus();
-                // } else if (u_type.value == "8" && dr_tr_id_zone.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select Zone");
-                //     dr_tr_id_zone.focus();
-                // } else if (u_type.value == "2" && area_tr_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select Territory");
-                //     area_tr_id.focus();
-                // } else if (u_type.value == "3" && area_tr_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select Territory");
-                //     area_tr_id.focus();
-                // } else if (u_type.value == "3" && dr_tr_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select Distributer");
-                //     dr_tr_id.focus();
-                // } else if (u_type.value == "3" && ot_tr_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select Rep Type");
-                //     ot_tr_id.focus();
-                // } else if (u_type.value == "2" && gp_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select User Group");
-                //     gp_id.focus();
-                // } else if (u_type.value == "7" && gp_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select User Group");
-                //     gp_id.focus();
-                // } else if (u_type.value == "8" && gp_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select User Group");
-                //     gp_id.focus();
-                // } else if (u_type.value == "15" && gp_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select User Group");
-                //     gp_id.focus();
-                // } else if (u_type.value == "manager" && u_distributor_id.selectedIndex == 0) {
-                //     valid = false;
-                //     alert("Select District Distributor");
-                //     u_distributor_id.focus();
-                // } else if (document.getElementById('buff_stock') && buff_stock.value != "" && !buff_stock.value.match(/^(\d+)$/)) {
-                //     valid = false;
-                //     alert("Enter Valid Number");
-                //     buff_stock.focus();
-                // } else if (document.getElementById('buff_stock') && buff_stock.value != "" && parseFloat(buff_stock.value) > 100) {
-                //     valid = false;
-                //     alert("Buffer Stock can't be greater than 100");
-                //     buff_stock.focus();
-                // } else if (uname.value == "") {
-                //     valid = false;
-                //     alert("Enter Username");
-                //     uname.focus();
-                // } else if (psw.value == "") {
-                //     valid = false;
-                //     alert("Enter Password");
-                //     psw.focus();
-                // } else {
-                //     for (var i = 1; i <= parseFloat($('#ar_count').val()); i++) {
-                //         if (document.getElementById('dis_id_' + i) && $('#dis_id_' + i).val() == "") {
-                //             valid = false;
-                //             alert("Select Territory");
-                //             $('#dis_id_' + i).focus();
-                //         }
-                //     }
-                // }
-                return valid;
+            valid = true;
+            if ($('#std_fname').val() == "") {
+                valid = false;
+                $('#std_fname').addClass("is-invalid");
+                $('#std_fname').focus();
+            } else { $('#std_fname').removeClass("is-invalid"); }
+
+            if ($('#std_lname').val() == "") {
+                valid = false;
+                $('#std_lname').addClass("is-invalid");
+                $('#std_lname').focus();
+            }  else { $('#std_lname').removeClass("is-invalid"); } 
+
+            if ( $('#std_dob').val() == "" || !date_pattern.test($('#std_dob').val()) ) {
+                valid = false;
+                $('#std_dob').addClass("is-invalid");
+                $('#std_dob').focus();
+            } else { $('#std_dob').removeClass("is-invalid"); }
+            
+            if ((!(gender[0].checked || gender[1].checked))) {
+                valid = false;
+                $('#std_gender_invalid_fbk').addClass("show-feedback");
+                $('#std_gender_1').focus();
+            } else { $('#std_gender_invalid_fbk').removeClass("show-feedback");; }
+            
+            if ( $('#std_mobile').val() == "" || ( !mobile_pattern1.test($('#std_mobile').val()) && !mobile_pattern2.test($('#std_mobile').val()) ) ) {
+                valid = false;
+                $('#std_mobile').addClass("is-invalid");
+                $('#std_mobile').focus();
+            } else { $('#std_mobile').removeClass("is-invalid"); }
+            
+            if ( $('#std_email').val() == "" || !email_pattern.test($('#std_email').val()) ) {
+                valid = false;
+                $('#std_email').addClass("is-invalid");
+                $('#std_email').focus();
+            } else { $('#std_email').removeClass("is-invalid"); }
+
+            if ($('#std_address').val() == "") {
+                valid = false;
+                $('#std_address').addClass("is-invalid");
+                $('#std_address').focus();
+            }  else { $('#std_address').removeClass("is-invalid"); } 
+
+            if ($('#std_username').val() == "" || $('#std_uname_chk').val() == 0) {
+                valid = false;
+                $('#std_username').addClass("is-invalid");
+                $('#std_uname_invalid_fbk').show();
+                $('#std_username').focus();
+            }  else { $('#std_username').removeClass("is-invalid"); } 
+
+            if ( $('#std_password').val() == "" || $('#std_confirm_password').val() == "" || $('#std_password_chk').val() == 0 ) {
+                valid = false;
+                $('#std_confirm_password').addClass("is-invalid");
+                $('#std_password').addClass("is-invalid");
+                $('#std_confirm_password').focus();
+            }  else { $('#std_confirm_password').removeClass("is-invalid"); $('#std_password').removeClass("is-invalid"); } 
+            
+            if ((!(al_stream[0].checked || al_stream[1].checked))) {
+                valid = false;
+                $('#std_al_stream_invalid_fbk').addClass("show-feedback");
+                $('#std_al_stream_1').focus();
+            } else { $('#std_al_stream_invalid_fbk').removeClass("show-feedback"); }
+            
+            if ((!(uni_stream[0].checked || uni_stream[1].checked))) {
+                valid = false;
+                $('#std_uni_stream_invalid_fbk').addClass("show-feedback");
+                $('#std_uni_stream_1').focus();
+            } else { $('#std_uni_stream_invalid_fbk').removeClass("show-feedback"); }
+
+            if ($('#std_ol_eng_result').val() == 0) {
+                valid = false;
+                $('#std_ol_eng_result').next().find('.select2-selection').addClass("is-invalid");
+                $('#std_ol_result_fbk').addClass("show-feedback");
+                $('#std_ol_eng_result').focus();
+            }  else { $('#std_ol_eng_result').next().find('.select2-selection').removeClass("is-invalid"); $('#std_ol_result_fbk').removeClass("show-feedback"); }
+
+            if ($('#std_al_eng_result').val() == 0) {
+                valid = false;
+                $('#std_al_eng_result').next().find('.select2-selection').addClass("is-invalid");
+                $('#std_al_result_fbk').addClass("show-feedback");
+                $('#std_al_eng_result').focus();
+            }  else { $('#std_al_eng_result').next().find('.select2-selection').removeClass("is-invalid"); $('#std_al_result_fbk').removeClass("show-feedback"); }
+
+            return valid;
         }
 
         function submit_student_data(event,btn_id,form_id) {
             event.preventDefault();
-            console.log(form_id);
 
             if(validate_student_form()) {
                 console.log('ela');
             }
         }
 
+        function validate_lecturer_form() {
+
+            var email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            var mobile_pattern1 = /^[0-9]{10}$/;
+            var mobile_pattern2 = /^[+]+[0-9]{11}$/;
+            var date_pattern = /^\d{4}-\d{2}-\d{2}$/;
+            var gender =document.getElementsByName('ltr_gender');
+
+            valid = true;
+            if ($('#ltr_fname').val() == "") {
+                valid = false;
+                $('#ltr_fname').addClass("is-invalid");
+                $('#ltr_fname').focus();
+            } else { $('#ltr_fname').removeClass("is-invalid"); }
+
+            if ($('#ltr_lname').val() == "") {
+                valid = false;
+                $('#ltr_lname').addClass("is-invalid");
+                $('#ltr_lname').focus();
+            }  else { $('#ltr_lname').removeClass("is-invalid"); } 
+
+            if ( $('#ltr_dob').val() == "" || !date_pattern.test($('#ltr_dob').val()) ) {
+                valid = false;
+                $('#ltr_dob').addClass("is-invalid");
+                $('#ltr_dob').focus();
+            } else { $('#ltr_dob').removeClass("is-invalid"); }
+            
+            if ((!(gender[0].checked || gender[1].checked))) {
+                valid = false;
+                $('#ltr_gender_invalid_fbk').addClass("show-feedback");
+                $('#ltr_gender_1').focus();
+            } else { $('#ltr_gender_invalid_fbk').removeClass("show-feedback");; }
+            
+            if ( $('#ltr_mobile').val() == "" || ( !mobile_pattern1.test($('#ltr_mobile').val()) && !mobile_pattern2.test($('#ltr_mobile').val()) ) ) {
+                valid = false;
+                $('#ltr_mobile').addClass("is-invalid");
+                $('#ltr_mobile').focus();
+            } else { $('#ltr_mobile').removeClass("is-invalid"); }
+            
+            if ( $('#ltr_email').val() == "" || !email_pattern.test($('#ltr_email').val()) ) {
+                valid = false;
+                $('#ltr_email').addClass("is-invalid");
+                $('#ltr_email').focus();
+            } else { $('#ltr_email').removeClass("is-invalid"); }
+
+            if ($('#ltr_address').val() == "") {
+                valid = false;
+                $('#ltr_address').addClass("is-invalid");
+                $('#ltr_address').focus();
+            }  else { $('#ltr_address').removeClass("is-invalid"); } 
+
+            if ($('#ltr_username').val() == "" || $('#ltr_uname_chk').val() == 0) {
+                valid = false;
+                $('#ltr_username').addClass("is-invalid");
+                $('#ltr_uname_invalid_fbk').show();
+                $('#ltr_username').focus();
+            }  else { $('#ltr_username').removeClass("is-invalid"); } 
+
+            if ( $('#ltr_password').val() == "" || $('#ltr_confirm_password').val() == "" || $('#ltr_password_chk').val() == 0 ) {
+                valid = false;
+                $('#ltr_confirm_password').addClass("is-invalid");
+                $('#ltr_password').addClass("is-invalid");
+                $('#ltr_confirm_password').focus();
+            }  else { $('#ltr_confirm_password').removeClass("is-invalid"); $('#ltr_password').removeClass("is-invalid"); }
+
+            if ($('#ltr_specialized').val() == "") {
+                valid = false;
+                $('#ltr_specialized').addClass("is-invalid");
+                $('#ltr_specialized').focus();
+            }  else { $('#ltr_specialized').removeClass("is-invalid"); }
+
+            if ($('#ltr_university').val() == "") {
+                valid = false;
+                $('#ltr_university').addClass("is-invalid");
+                $('#ltr_university').focus();
+            }  else { $('#ltr_university').removeClass("is-invalid"); }
+
+            return valid;
+        }
+
+        function submit_lecturer_data(event,btn_id,form_id) {
+            event.preventDefault();
+
+            if(validate_lecturer_form()) {
+                console.log('ela lecure');
+            }
+        }
 
     </script>
     <!-- end of writed scripts -->

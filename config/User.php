@@ -36,6 +36,20 @@ class User extends DB {
         }
     }
 
+    public function check_userame($username){
+        
+        $sql = "SELECT * FROM tbl_user u WHERE u.u_username = '$username'";
+        $query = $this->connection->query($sql);
+ 
+        if($query->num_rows > 0){
+            return true;
+        }
+        else{
+            return false;
+        }    
+    
+    }
+
 }
 
 
