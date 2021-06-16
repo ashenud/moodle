@@ -27,41 +27,49 @@ class User extends DB {
     }
 
     public function register_student($first_name,$last_name,$dob,$gender,$mobile,$email,$address,$username,$password,$al_stream,$uni_stream,$ol_eng_result,$al_eng_result){
+        
+        $all_query = true;
+        $this->connection->autocommit(FALSE);
+        
         $sql1 = "INSERT INTO tbl_users (first_name, last_name, gender, email, type_id, address, username, password	) VALUES ('".$first_name."','".$last_name."','".$gender."','".$email."','2','".$address."','".$username."','".$password."')";
-        $query1 = $this->connection->query($sql1);
+        $this->connection->query($sql1) ? null : $all_query = false;
+        
+        $user_id = $this->connection->insert_id;
+        $sql2 = "INSERT INTO tbl_students (user_id, first_name, last_name, dob, gender, mobile, email, address, al_stream, uni_stream, ol_eng_result, al_eng_result	) VALUES ('".$user_id."','".$first_name."','".$last_name."','".$dob."','".$gender."','".$mobile."','".$email."','".$address."','".$al_stream."','".$uni_stream."','".$ol_eng_result."','".$al_eng_result."')";
+        $this->connection->query($sql2) ? null : $all_query = false;
 
-        if($query1){
-            $user_id = $this->connection->insert_id;
-            $sql2 = "INSERT INTO tbl_students (user_id, first_name, last_name, dob, gender, mobile, email, address, al_stream, uni_stream, ol_eng_result, al_eng_result	) VALUES ('".$user_id."','".$first_name."','".$last_name."','".$dob."','".$gender."','".$mobile."','".$email."','".$address."','".$al_stream."','".$uni_stream."','".$ol_eng_result."','".$al_eng_result."')";
-            $query2 = $this->connection->query($sql2);
-            if ($query2) {
-                return true;
-            }
-            else {
-                return false;
-            }
-        }else{
+        if($all_query) {
+            $this->connection->commit();
+            return true;
+        }
+        else {
+            $this->connection->rollback();
             return false;
         }
+                    
     }
 
     public function register_lecturer($first_name,$last_name,$dob,$gender,$mobile,$email,$address,$username,$password,$specialized,$university){
-        $sql1 = "INSERT INTO tbl_users (first_name, last_name, gender, email, type_id, address, username, password	) VALUES ('".$first_name."','".$last_name."','".$gender."','".$email."','1','".$address."','".$username."','".$password."')";
-        $query1 = $this->connection->query($sql1);
 
-        if($query1){
-            $user_id = $this->connection->insert_id;
-            $sql2 = "INSERT INTO tbl_lecturers (user_id, first_name, last_name, dob, gender, mobile, email, address, specialized, university ) VALUES ('".$user_id."','".$first_name."','".$last_name."','".$dob."','".$gender."','".$mobile."','".$email."','".$address."','".$specialized."','".$university."')";
-            $query2 = $this->connection->query($sql2);
-            if ($query2) {
-                return true;
-            }
-            else {
-                return false;
-            }
-        }else{
-            return false;
+        $all_query = true;
+        $this->connection->autocommit(FALSE);
+
+        $sql1 = "INSERT INTO tbl_users (first_name, last_name, gender, email, type_id, address, username, password	) VALUES ('".$first_name."','".$last_name."','".$gender."','".$email."','1','".$address."','".$username."','".$password."')";
+        $this->connection->query($sql1) ? null : $all_query = false;
+        
+        $user_id = $this->connection->insert_id;
+        $sql2 = "INSERT INTO tbl_lecturers (user_id, first_name, last_name, dob, gender, mobile, email, address, specialized, university ) VALUES ('".$user_id."','".$first_name."','".$last_name."','".$dob."','".$gender."','".$mobile."','".$email."','".$address."','".$specialized."','".$university."')";
+        $this->connection->query($sql2) ? null : $all_query = false;
+
+        if($all_query) {
+            $this->connection->commit();
+            return true;
         }
+        else {
+            $this->connection->rollback();
+            return false;
+        }  
+
     }
 
     public function check_userame($username){
