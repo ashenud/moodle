@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 16, 2021 at 05:24 PM
+-- Generation Time: Jun 16, 2021 at 05:27 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.9
 
@@ -50,20 +50,7 @@ CREATE TABLE `tbl_lecturers` (
 --
 
 INSERT INTO `tbl_lecturers` (`id`, `user_id`, `first_name`, `last_name`, `dob`, `gender`, `mobile`, `email`, `address`, `image_url`, `specialized`, `university`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Lesly', 'Jayasekara', '1971-09-08', 1, '', 'lesly@gmail.com', '25/4, Galle Road,  Moratuwa', NULL, 'Mathematics', 'University of Ruhuna', NULL, '2021-05-16 08:28:23', '2021-06-16 15:48:03'),
-(3, 4, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'asd', 'asf', NULL, '2021-06-16 16:29:06', NULL),
-(4, 7, 'ASHEN', 'UDITHAMAL', '2021-06-15', 2, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'qwe', 'asd', NULL, '2021-06-16 16:32:42', NULL),
-(5, 12, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:38:31', NULL),
-(6, 13, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:39:30', NULL),
-(7, 14, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:40:07', NULL),
-(8, 15, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:40:13', NULL),
-(9, 16, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:40:33', NULL),
-(10, 17, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:40:50', NULL),
-(11, 18, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:42:06', NULL),
-(12, 19, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:42:07', NULL),
-(13, 20, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '213', NULL, '2021-06-16 16:42:19', NULL),
-(14, 23, 'ASHEN', 'UDITHAMAL', '2021-06-02', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'asd', 'asfd', NULL, '2021-06-16 16:45:28', NULL),
-(15, 24, 'ASHEN', 'UDITHAMAL', '2021-06-09', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '213', '123', NULL, '2021-06-16 16:46:11', NULL);
+(1, 1, 'Lesly', 'Jayasekara', '1971-09-08', 1, '', 'lesly@gmail.com', '25/4, Galle Road,  Moratuwa', NULL, 'Mathematics', 'University of Ruhuna', NULL, '2021-05-16 08:28:23', '2021-06-16 15:48:03');
 
 -- --------------------------------------------------------
 
@@ -143,16 +130,7 @@ CREATE TABLE `tbl_students` (
 --
 
 INSERT INTO `tbl_students` (`id`, `user_id`, `first_name`, `last_name`, `dob`, `gender`, `mobile`, `email`, `address`, `image_url`, `al_stream`, `uni_stream`, `ol_eng_result`, `al_eng_result`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 2, 'Ashen', 'Udithamal', '1995-03-16', 1, '', 'ashen@gmail.com', '28/4, Kottawa Road, Battaramulla', NULL, 1, 2, 2, 2, NULL, '2021-05-16 15:13:59', '2021-06-16 15:48:18'),
-(3, 3, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 1, 1, 3, 3, NULL, '2021-06-16 16:27:54', NULL),
-(4, 5, 'ASHEN', 'UDITHAMAL', '2021-06-15', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 1, 1, 3, 3, NULL, '2021-06-16 16:31:20', NULL),
-(5, 6, 'ASHEN', 'UDITHAMAL', '2021-06-15', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 1, 1, 3, 3, NULL, '2021-06-16 16:32:20', NULL),
-(6, 8, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 2, 1, 3, 2, NULL, '2021-06-16 16:33:34', NULL),
-(7, 9, 'ASHEN', 'UDITHAMAL', '2021-06-08', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 2, 1, 3, 2, NULL, '2021-06-16 16:34:57', NULL),
-(8, 10, 'ASHEN', 'UDITHAMAL', '2021-06-10', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 2, 1, 3, 3, NULL, '2021-06-16 16:36:58', NULL),
-(9, 11, 'ASHEN', 'UDITHAMAL', '2021-06-16', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 1, 1, 3, 3, NULL, '2021-06-16 16:37:48', NULL),
-(10, 21, 'ASHEN', 'UDITHAMAL', '2021-06-15', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 1, 1, 3, 2, NULL, '2021-06-16 16:43:26', NULL),
-(11, 22, 'ASHEN', 'UDITHAMAL', '2021-06-15', 1, '+94712782201', 'udithamal.lk@gmail.com', '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 2, 1, 3, 3, NULL, '2021-06-16 16:44:12', NULL);
+(1, 2, 'Ashen', 'Udithamal', '1995-03-16', 1, '', 'ashen@gmail.com', '28/4, Kottawa Road, Battaramulla', NULL, 1, 2, 2, 2, NULL, '2021-05-16 15:13:59', '2021-06-16 15:48:18');
 
 -- --------------------------------------------------------
 
@@ -182,29 +160,7 @@ CREATE TABLE `tbl_users` (
 
 INSERT INTO `tbl_users` (`id`, `first_name`, `last_name`, `gender`, `email`, `type_id`, `address`, `image_url`, `username`, `password`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'Lesly', 'Jayasekara', 1, 'lesly@gmail.com', 1, '25/4, Galle Road,  Moratuwa', NULL, 'lecturer1', '202cb962ac59075b964b07152d234b70', NULL, '2021-05-16 08:28:23', '2021-06-13 10:12:20'),
-(2, 'Ashen', 'Udithamal', 1, 'ashen@gmail.com', 2, '28/4, Kottawa Road, Battaramulla', NULL, 'student1', '202cb962ac59075b964b07152d234b70', NULL, '2021-05-16 15:13:59', '2021-06-03 13:00:00'),
-(3, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:27:54', NULL),
-(4, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '1233', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:29:06', NULL),
-(5, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'qwe', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:31:20', NULL),
-(6, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'qwe', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:32:20', NULL),
-(7, 'ASHEN', 'UDITHAMAL', 2, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'sad', 'd78c03d72e72b44a131d255aec3c8a11', NULL, '2021-06-16 16:32:42', NULL),
-(8, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'qwee', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:33:34', NULL),
-(9, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '12333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:34:57', NULL),
-(10, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'asd', '7815696ecbf1c96e6894b779456d330e', NULL, '2021-06-16 16:36:58', NULL),
-(11, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'qweee', '76d80224611fc919a5d54f0ff9fba446', NULL, '2021-06-16 16:37:48', NULL),
-(12, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:38:31', NULL),
-(13, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:39:30', NULL),
-(14, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:40:07', NULL),
-(15, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:40:13', NULL),
-(16, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:40:33', NULL),
-(17, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:40:50', NULL),
-(18, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:42:06', NULL),
-(19, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:42:07', NULL),
-(20, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '123333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:42:19', NULL),
-(21, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'asddd', '7815696ecbf1c96e6894b779456d330e', NULL, '2021-06-16 16:43:26', NULL),
-(22, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 2, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'asdddd', '7815696ecbf1c96e6894b779456d330e', NULL, '2021-06-16 16:44:12', NULL),
-(23, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, 'asdff', '7815696ecbf1c96e6894b779456d330e', NULL, '2021-06-16 16:45:28', NULL),
-(24, 'ASHEN', 'UDITHAMAL', 1, 'udithamal.lk@gmail.com', 1, '33/B, PUWAKGAHADENIYA ROAD, HOKANDARA EAST, HOKANDARA.', NULL, '1233333', '202cb962ac59075b964b07152d234b70', NULL, '2021-06-16 16:46:11', NULL);
+(2, 'Ashen', 'Udithamal', 1, 'ashen@gmail.com', 2, '28/4, Kottawa Road, Battaramulla', NULL, 'student1', '202cb962ac59075b964b07152d234b70', NULL, '2021-05-16 15:13:59', '2021-06-03 13:00:00');
 
 -- --------------------------------------------------------
 
