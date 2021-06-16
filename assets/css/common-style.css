@@ -15,6 +15,12 @@
     cursor: not-allowed !important;
 }
 
+.submit-disabled {
+    pointer-events: none !important;
+    background-color: #8fa97e !important;
+    cursor: not-allowed !important;
+}
+
 .btn-deleted {
     background-color: #4a4949;
     color: #fff7f7;

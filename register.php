@@ -53,7 +53,7 @@
                             <!-- Tabs content -->
                             <div class="tab-content" id="ex2-content">
                                 <div class="tab-pane fade show active" id="ex2-student-tab" role="tabpanel" aria-labelledby="student-tab">
-                                    <form action="/php/register.php" id="std_form" name="std_form" method="POST">
+                                    <form action="/php/user-register.php" id="std_form" name="std_form" method="POST">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="form-group col-md-6 form-white mb-4">
@@ -160,11 +160,11 @@
                                                     <label class="form-label" for="std_ol_eng_result">OL english result</label>
                                                     <select name="std_ol_eng_result" id="std_ol_eng_result" class="form-control select2-common-class">
                                                         <option value="0">SELECT RESULT</option>
-                                                        <option value="A">A</option>
-                                                        <option value="B">B</option>
-                                                        <option value="C">C</option>
-                                                        <option value="S">S</option>
-                                                        <option value="F">F</option>
+                                                        <option value="1">A Pass</option>
+                                                        <option value="2">B Pass</option>
+                                                        <option value="3">C Pass</option>
+                                                        <option value="4">S Pass</option>
+                                                        <option value="5">F Pass</option>
                                                     </select>
                                                     <div class="invalid-feedback" id="std_ol_result_fbk">Please provide a valid result.</div>
                                                 </div>
@@ -172,18 +172,18 @@
                                                     <label class="form-label" for="std_al_eng_result">AL english result</label>                                                  
                                                     <select name="std_al_eng_result" id="std_al_eng_result" class="form-control select2-common-class">
                                                         <option value="0">SELECT RESULT</option>
-                                                        <option value="A">A</option>
-                                                        <option value="B">B</option>
-                                                        <option value="C">C</option>
-                                                        <option value="S">S</option>
-                                                        <option value="F">F</option>
+                                                        <option value="1">A Pass</option>
+                                                        <option value="2">B Pass</option>
+                                                        <option value="3">C Pass</option>
+                                                        <option value="4">S Pass</option>
+                                                        <option value="5">F Pass</option>
                                                     </select>
                                                     <div class="invalid-feedback" id="std_al_result_fbk">Please provide a valid result.</div>
                                                 </div>
 
                                                 <div class="form-group form-white mb-4">
-                                                    <input type="hidden" id="std_register_type" name="register_type" value="2" />
-                                                    <input type="button" id="std_submit_data" class="btn btn-lg btn-success btn-block" value="SAVE" onclick="submit_student_data(event,this.id,'std_form')"/>
+                                                    <input type="hidden" id="std_register_type" name="register_type" value="std" />
+                                                    <button id="std_submit_data" class="btn btn-lg btn-success btn-block" onclick="submit_form_data(event,this.id,'std_form')">SAVE</button>
                                                 </div>
 
                                                 <div class="click-here-area">
@@ -194,7 +194,7 @@
                                     </form>
                                 </div>
                                 <div class="tab-pane fade" id="ex2-lecturer-tab" role="tabpanel" aria-labelledby="lecturer-tab">
-                                    <form action="/php/register.php" id="ltr_form" name="ltr_form" method="POST">
+                                    <form action="/php/user-register.php" id="ltr_form" name="ltr_form" method="POST">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="form-group col-md-6 form-white mb-4">
@@ -281,8 +281,8 @@
                                                 </div>
 
                                                 <div class="form-group form-white mb-4">
-                                                    <input type="hidden" id="ltr_register_type" name="register_type" value="1" />
-                                                    <input type="button" id="ltr_submit_data" class="btn btn-lg btn-success btn-block" value="SAVE" onclick="submit_lecturer_data(event,this.id,'ltr_form')"/>
+                                                    <input type="hidden" id="ltr_register_type" name="register_type" value="ltr" />
+                                                    <button id="ltr_submit_data" class="btn btn-lg btn-success btn-block" onclick="submit_form_data(event,this.id,'ltr_form')">SAVE</button>
                                                 </div>
 
                                                 <div class="click-here-area">
@@ -384,7 +384,7 @@
                     
         }
 
-        function validate_student_form() {
+        function std_form_validate() {
 
             var email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
             var mobile_pattern1 = /^[0-9]{10}$/;
@@ -480,15 +480,7 @@
             return valid;
         }
 
-        function submit_student_data(event,btn_id,form_id) {
-            event.preventDefault();
-
-            if(validate_student_form()) {
-                console.log('ela');
-            }
-        }
-
-        function validate_lecturer_form() {
+        function ltr_form_validate() {
 
             var email_pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
             var mobile_pattern1 = /^[0-9]{10}$/;
@@ -568,11 +560,23 @@
             return valid;
         }
 
-        function submit_lecturer_data(event,btn_id,form_id) {
+        function submit_form_data(event,btn_id,form_id) {
             event.preventDefault();
+            var id = btn_id;
+            var user = id.split("_");
+            var user_type = user[0];
 
-            if(validate_lecturer_form()) {
-                console.log('ela lecure');
+            if( user_type == "std" ) {
+                if(std_form_validate()) {
+                    $('#'+btn_id).addClass("submit-disabled");
+                    document.forms[form_id].submit();
+                }
+            }
+            else {
+                if(ltr_form_validate()) {
+                    $('#'+btn_id).addClass("submit-disabled");
+                    document.forms[form_id].submit();
+                }
             }
         }
 

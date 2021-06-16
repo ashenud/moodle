@@ -18,22 +18,25 @@ if(isset($_POST['login'])) {
         header('Location: /');
     }
     else{
-        $_SESSION['u_id'] = $auth['u_id'];
-        $_SESSION['u_type_id'] = $auth['u_type_id'];
-        $_SESSION['u_first_name'] = $auth['u_first_name'];
-        $_SESSION['u_last_name'] = $auth['u_last_name'];
-        $_SESSION['u_name'] =  $auth['u_first_name']." ".$auth['u_last_name'];
-        $_SESSION['u_address'] = $auth['u_address'];
-        $_SESSION['u_email'] = $auth['u_email'];
-        $_SESSION['u_age'] = $auth['u_age'];
-        $_SESSION['u_image_url'] = $auth['u_image_url'];
+        $_SESSION['id'] = $auth['id'];
+        $_SESSION['type_id'] = $auth['type_id'];
+        $_SESSION['first_name'] = $auth['first_name'];
+        $_SESSION['last_name'] = $auth['last_name'];
+        $_SESSION['name'] =  $auth['first_name']." ".$auth['last_name'];
+        $_SESSION['address'] = $auth['address'];
+        $_SESSION['email'] = $auth['email'];
+        $_SESSION['image_url'] = $auth['image_url'];
         $_SESSION['flash_type'] = "success";
         $_SESSION['flash_message'] = "SUCCESSFULLY LOGED IN";
         /* echo '<pre>';
         print_r($_SESSION);
         echo '<pre>';    */
-        
-        header('Location: /pages/lecturer/dashboard.php');
+        if($auth['type_id'] == 1) {
+            header('Location: /pages/lecturer/dashboard.php');
+        }
+        else {            
+            header('Location: /pages/student/dashboard.php');
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 if(isset($_SESSION["flash_type"]) && isset($_SESSION["flash_message"])) {
 
     ?> 
@@ -7,7 +7,7 @@ if(isset($_SESSION["flash_type"]) && isset($_SESSION["flash_message"])) {
         $(document).ready(function() {
             var type = '<?php echo $_SESSION["flash_type"]?>';
             var message = '<?php echo $_SESSION["flash_message"]?>';
-            swal("Opps!", message, type)
+            swal("Alert !", message, type)
         });
     </script>
     <?php
