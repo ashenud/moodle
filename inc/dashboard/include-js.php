@@ -4,3 +4,5 @@
 <script type="text/javascript" src="/assets/js/select2.min.js"></script>
 <script type="text/javascript" src="/assets/datepicker/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="/assets/sweetalert/sweetalert2.all.js"></script>
+<script type="text/javascript" src="/assets/js/jquery-dateformat.min.js"></script>
+<script type="text/javascript" src="/assets/js/dashboard-script.js"></script>

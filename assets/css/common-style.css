@@ -57,3 +57,24 @@
     color: #fff;
     background-color:#8cc168 !important;
 }
+
+.pusher-alert-div {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 400px;
+    z-index: 105;
+}
+.alert-custom-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.alert-custom {
+    color: #7c7c7c;
+    background-color: #e2eadd;
+    border-color: #e2eadd;
+}
+.alert-custom p {
+    margin-bottom: 0px;
+}
