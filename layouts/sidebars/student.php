@@ -9,15 +9,10 @@
             <a class="side-link li-rem" href="/pages/student/reminders.php">
                 <i class="now-ui-icons business_badge"></i> Reminders
             </a>
-        </li>
+        </li>       
         <li class="side-item">
-            <a class="side-link li-item" href="{{ url('admin/items') }}">
-                <i class="now-ui-icons design_app"></i> Items
-            </a>
-        </li>        
-        <li class="side-item">
-            <a class="side-link li-month-end" href="{{ url('admin/month-end') }}">
-                <i class="now-ui-icons files_single-copy-04"></i> Month End
+            <a class="side-link li-dict" href="/pages/student/dictionary.php">
+                <i class="now-ui-icons files_single-copy-04"></i> Dictionary
             </a>
         </li>
     </ul>
