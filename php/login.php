@@ -19,6 +19,7 @@ if(isset($_POST['login'])) {
     }
     else{
         $_SESSION['id'] = $auth['id'];
+        $_SESSION['user_id'] = $auth['id'];
         $_SESSION['type_id'] = $auth['type_id'];
         $_SESSION['first_name'] = $auth['first_name'];
         $_SESSION['last_name'] = $auth['last_name'];
