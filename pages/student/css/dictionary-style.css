@@ -1,0 +1,161 @@
+.card-custom {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 0;
+}
+
+.card-header {
+    border-bottom: none;
+    background: #fff;
+}
+
+.card-custom {
+    background: none;
+    border: none;
+    height: auto ;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0;
+    margin: 10px 10px;    
+}
+
+.card-custom .card-header h5 {
+    float: left;
+}
+
+.card-custom .card-header .btn {
+    min-width: 100px;
+    background: #8cc168;
+    border-radius: 0.2275rem;
+    min-height: 38px;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-custom .table-reminder {
+	background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.card-custom .table-reminder tbody tr:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+.card-custom .table-reminder tbody tr td {
+	padding: 5px;
+	border-top-color: #eee;
+}
+
+.card-custom .table-reminder .discription {
+	font-size: 12px;
+    margin-left: 20px;
+}
+
+.card-custom .table-reminder .date {
+	font-size: 12px;
+}
+
+.card-custom .table-reminder .btn {
+    background: transparent;
+    font-size: 14px;
+    padding: 0 0;
+    border: none;
+    box-shadow: none;
+}
+
+
+/* text speech */
+.card-custom h1 {
+    text-align: center;
+    font-weight: 100;
+}
+
+.card-custom header {
+    margin-bottom: 2em;
+}
+
+@keyframes bg-pulse {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: #e2eadd;
+    }
+
+    100% {
+        backgrouond-color: #fff;
+    }
+}
+
+.card-custom main.speaking {
+    animation: bg-pulse 1.5s alternate ease-in-out infinite;
+    margin: 0 50px 20px 50px;
+    border-radius: 5px;
+}
+
+.card-custom #result {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+.card-custom p {
+    margin-bottom: 4px;
+}
+
+.card-custom #result .final {
+    color: #0d122b;
+    font-style: normal;
+}
+
+.card-custom a {
+    color: #0d122b;
+}
+
+.card-custom .error {
+    color: #f22f46;
+    text-align: center;
+}
+
+.card-custom footer {
+    border-top: 1px solid #0d122b;
+    text-align: center;
+}
+
+@media screen and (max-width:420px) {
+    .calendar_weekdays div, .calendar_content div {
+        font-size: 11px;
+    }
+    .calendar_weekdays div {
+        font-size: 6px !important;
+    }
+    .calendar_header h2 {
+        font-size: 10px;
+    }
+    .search-babies .form-control::placeholder {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .card-custom .table-reminder .media-photo {
+        width: 15px;
+    }
+    .card-custom .table-reminder .discription,
+    .card-custom .table-reminder .btn,
+    .card-custom .table-reminder .date {
+        font-size: 0.5rem;
+    }
+    .card-custom .table-reminder .btn {
+        padding: .2rem .2rem;
+    }
+    .card-custom .card-header h6 {
+        font-size: 15px;
+    }
+
+}
+
+
+

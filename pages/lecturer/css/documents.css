@@ -1,0 +1,136 @@
+#file-manager {
+    background: white;
+    border-radius: 10px;
+    padding: 10px 10px 50px 10px;
+}
+
+.file-manager {
+    --border-sep-color: rgb(218, 220, 224);
+    --color-item-selected: #1967d2;
+    --bg-color-item-selected: #e8f0fe;
+    user-select: none;
+}
+
+.file-manager .menu-bar {
+    border-bottom: 1px solid var(--border-sep-color);
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: default;
+}
+
+.file-manager .btn-upload {
+    background: #88b77b;
+}
+
+.file-manager .menu-bar .current-path {
+    display: flex;
+    font-size: 18px;
+}
+.file-manager .top-level-path {
+    padding: 2px 4px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.file-manager .top-level-path:hover {
+    background-color: #f1f3f4;
+}
+.file-manager .current-path .current-dir { display: flex; align-items: center; }
+.file-manager .current-path .current-dir::before {
+    display: flex;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 14px;
+    padding: 0 10px 0 8px;
+    content: '\f054';
+}
+
+.file-manager .fm-row {
+    display: flex;
+    border-bottom: 1px solid var(--border-sep-color);
+}
+.file-manager .header,
+.file-manager .file-list {
+    font-size: 13px;
+    cursor: default;
+}
+
+.file-manager .header {
+    padding: 15px 8px 10px 8px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.54);
+    text-align: center;
+}
+.file-manager .list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+}
+.file-manager .list-item .list-item-owner,
+.file-manager .list-item .list-item-upload-date,
+.file-manager .list-item .list-item-file-size,
+.file-manager .list-item .list-item-file-action {
+    text-align: center;
+}
+
+.file-manager .fm-row > *:nth-child(1) {
+    width: 55%;
+}
+
+.file-manager .fm-row > *:not(:nth-child(1)) {
+    width: 15%;
+}
+
+.file-manager .list-item > *:nth-child(1) {
+    font-weight: bold;
+}
+
+.file-manager .list-item.selected {
+    color: var(--color-item-selected);
+    background-color: var(--bg-color-item-selected);
+}
+
+.file-manager .controls { display: flex; align-items: center; }
+.file-manager .controls > * { margin-left: 10px; }
+.file-manager .controls > button { border: none; outline: none; background: none; }
+.file-manager .controls > button.hidden { display: none; }
+
+.file-manager .btn-upload { color: white; }
+.file-manager .btn-upload:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+    pointer-events: unset;
+}
+.file-manager .btn-upload i {
+    margin-right: 5px;
+}
+
+.file-manager .file-input {
+    display: none;
+}
+
+.file-manager .list-item-name {
+    display: flex;
+    align-items: center;
+}
+.file-manager .list-item-name::before {
+    font-family: 'Font Awesome 5 Free';
+    padding: 0 15px 0 10px;
+    font-size: 20px;
+}
+
+.file-manager .list-item a {
+    display: none;
+}
+
+.file-manager .list-item-directory .list-item-name::before { content: '\f07b'; }
+.file-manager .list-item-file .list-item-name::before { content: '\f15b'; font-weight: 400; }
+.file-manager .list-item-word .list-item-name::before { content: '\f1c2'; font-weight: 400; }
+.file-manager .list-item-ppt .list-item-name::before { content: '\f1c4'; font-weight: 400; }
+.file-manager .list-item-xls .list-item-name::before { content: '\f1c3'; font-weight: 400; }
+.file-manager .list-item-pdf .list-item-name::before { content: '\f1c1'; font-weight: 400; }
+.file-manager .list-item-video .list-item-name::before { content: '\f1c8'; font-weight: 400; }
+.file-manager .list-item-img .list-item-name::before { content: '\f1c5'; font-weight: 400; }
+.file-manager .list-item-aud .list-item-name::before { content: '\f1c7'; font-weight: 400; }
+.file-manager .list-item-zip .list-item-name::before { content: '\f1c6'; font-weight: 400; }

@@ -18,7 +18,7 @@
     <div class="wrapper">
         
         <!--top navbar-->
-        <?php include '../../layouts/navbars/lecturer.php';?>
+        <?php include '../../layouts/navbars/student.php';?>
         <!--end of top navbar-->
 
         <!-- main body (sidebar and content) -->
@@ -43,13 +43,17 @@
     </div>
 
     <!--sidebar-->
-    <?php include '../../layouts/sidebars/lecturer.php';?>
+    <?php include '../../layouts/sidebars/student.php';?>
     <!--end of sidebar-->
 
     <?php 
     //js
     include('../../inc/dashboard/include-js.php');
     ?>
+
+    <!-- pusher alerts -->
+    <?php include '../../inc/include-pusher.php';?>
+    <!--end of pusher-->
 
     <script>
         $(function() {
