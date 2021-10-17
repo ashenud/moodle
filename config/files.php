@@ -190,7 +190,7 @@ $repository = new FileRepository();
 
 function getFileSystem(): \League\Flysystem\Filesystem
 {
-    $adapter = new \League\Flysystem\Local\LocalFilesystemAdapter(__DIR__ . '/../../../data/');
+    $adapter = new \League\Flysystem\Local\LocalFilesystemAdapter(__DIR__ . '/../storage/files/');
     return new \League\Flysystem\Filesystem($adapter);
 }
 

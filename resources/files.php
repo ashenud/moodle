@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 require_once 'session.php';
-require_once __DIR__ . "/../inc/files.php";
+require_once __DIR__ . "/../config/files.php";
 header('Content-Type: application/json');
 
 $servername = "localhost";
@@ -130,7 +130,7 @@ if(isset($_GET['action'])){
 
             $f_ile = resolveFilePath($id);
 
-            $fp = fopen(__DIR__ . '/../../../data/'.$f_ile, 'r');
+            $fp = fopen(__DIR__ . '/../storage/files/'.$f_ile, 'r');
 
             $fileInfo = postFile('0', $fp, $fileName, $fileType, $mimeType, $size, '0');
             fclose($fp);
@@ -158,7 +158,7 @@ if(isset($_GET['action'])){
 
         $f_ile = resolveFilePath($id);
 
-        $fp = fopen(__DIR__ . '/../../../data/'.$f_ile, 'r');
+        $fp = fopen(__DIR__ . '/../storage/files/'.$f_ile, 'r');
 
         $fileInfo = postFile($ownerId, $fp, $fileName, $fileType, $mimeType, $size, '0');
         fclose($fp);

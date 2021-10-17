@@ -52,7 +52,6 @@
 }
 .file-manager .header,
 .file-manager .file-list {
-    margin-right: 70px;
     font-size: 13px;
     cursor: default;
 }
@@ -61,11 +60,18 @@
     padding: 15px 8px 10px 8px;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.54);
+    text-align: center;
 }
 .file-manager .list-item {
     display: flex;
     align-items: center;
     padding: 10px 8px;
+}
+.file-manager .list-item .list-item-owner,
+.file-manager .list-item .list-item-upload-date,
+.file-manager .list-item .list-item-file-size,
+.file-manager .list-item .list-item-file-action {
+    text-align: center;
 }
 
 .file-manager .fm-row > *:nth-child(1) {

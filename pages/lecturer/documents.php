@@ -209,11 +209,13 @@
         <div class="main-body open-sidebar" id="main-body">
 
             <!-- content -->
-            <div class="row mb-5">
-                <div class="col">
-                    <div id="file-manager"></div>
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col">
+                        <div id="file-manager"></div>
+                    </div>
                 </div>
-            </div>   
+            </div>
             <!-- end of content -->
 
         </div>

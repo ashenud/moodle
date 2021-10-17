@@ -1,6 +1,6 @@
 <?php
 require_once 'session.php';
-require_once __DIR__ . "/../inc/files.php";
+require_once __DIR__ . "/../config/files.php";
 
 $ownerId = $_SESSION['user_id'];
 

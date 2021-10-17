@@ -7,7 +7,7 @@
 node_modules/
 dist/
 vendor/
-resources/zip/
+storage/files/
 
 # Compiled Java class files
 *.class
