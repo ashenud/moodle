@@ -1,29 +1,10 @@
-# README #
+# LEARNING MANAGEMENT SYSTEM #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Pull this repository to your hddocs folder
+* Crate a virtualhost to current repository derectory. [click here](https://www.nicesnippets.com/blog/how-to-create-virtual-host-in-xampp-windows)
+* Create a database as 'db_moodle' and import db_moodle.sql file to it
+* Run 'composer update' command in your project path using terminal
+* Browse using your created host in browser
