@@ -9,10 +9,20 @@
             <a class="side-link li-rem" href="/pages/student/reminders.php">
                 <i class="now-ui-icons business_badge"></i> Reminders
             </a>
-        </li>       
+        </li>
         <li class="side-item">
             <a class="side-link li-dict" href="/pages/student/dictionary.php">
                 <i class="now-ui-icons files_single-copy-04"></i> Dictionary
+            </a>
+        </li>
+        <li class="side-item">
+            <a class="side-link li-stypl" href="/pages/student/study-plan.php">
+                <i class="now-ui-icons education_hat"></i> Study Plan
+            </a>
+        </li>
+        <li class="side-item">
+            <a class="side-link li-sum" href="/pages/student/summarization.php">
+                <i class="now-ui-icons education_atom"></i> Summarization
             </a>
         </li>
     </ul>
