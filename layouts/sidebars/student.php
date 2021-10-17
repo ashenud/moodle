@@ -20,6 +20,11 @@
                 <i class="now-ui-icons education_hat"></i> Study Plan
             </a>
         </li>
+        <li class="side-item">
+            <a class="side-link li-sum" href="/pages/student/summarization.php">
+                <i class="now-ui-icons education_atom"></i> Summarization
+            </a>
+        </li>
     </ul>
 </div>
 <div class="sidebar-overlay open-sidebar" id="sidebar-overlay"></div>
