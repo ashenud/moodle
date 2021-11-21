@@ -13,7 +13,7 @@
     //css
     include('../../inc/dashboard/include-css.php');
     ?>
-    <link rel="stylesheet" href="/pages/student/css/dictionary-style.css">
+    <link rel="stylesheet" href="/pages/student/css/note-book-style.css">
 
     <title>LERNING MANAGEMENT SYSTEM</title>
 
@@ -35,7 +35,7 @@
                     <div class="col-12-6 mb-2">
                         <div class="card card-custom">
                             <div class="card-header mt-2 mb-3">
-                                <h5 class="font-weight-bold">Dictionary</h5>
+                                <h5 class="font-weight-bold">Note Book</h5>
                                 <button id="start-listning" class="btn btn-sm text-light">Start listening</button>
                             </div>
                             <header>
@@ -86,6 +86,7 @@
             const button = document.getElementById("start-listning");
             const result = document.getElementById("result");
             const main = document.getElementsByTagName("main")[0];
+            var input = ""; 
             let listening = false;
             const SpeechRecognition =
                 window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -96,6 +97,7 @@
                     main.classList.remove("speaking");
                     recognition.stop();
                     button.textContent = "Start listening";
+                    console.log(input);
                 };
 
                 const start = () => {
@@ -106,11 +108,13 @@
 
                 const onResult = event => {
                     result.innerHTML = "";
+                    input = ""; 
                     for (const res of event.results) {
                         const text = document.createTextNode(res[0].transcript);
                         const p = document.createElement("p");
                         if (res.isFinal) {
                             p.classList.add("final");
+                            input += res[0].transcript;
                         }
                         p.appendChild(text);
                         result.appendChild(p);
@@ -130,6 +134,8 @@
                 message.setAttribute("aria-hidden", "false");
             }
         });
+
+        function get() 
 
     </script>      
 

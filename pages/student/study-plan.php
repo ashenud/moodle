@@ -13,7 +13,7 @@
     //css
     include('../../inc/dashboard/include-css.php');
     ?>
-    <link rel="stylesheet" href="/pages/student/css/dictionary-style.css">
+    <link rel="stylesheet" href="/pages/student/css/note-book-style.css">
 
     <title>LERNING MANAGEMENT SYSTEM</title>
 
