@@ -92,6 +92,12 @@ class User extends DB {
     
     }
 
+    public function get_grade_point_value($user_id){
+        $sql = "SELECT * FROM tbl_students s WHERE s.user_id = '$user_id'";
+        $query = $this->connection->query($sql);
+        return $query->fetch_assoc();
+    }
+
 }
 
 
