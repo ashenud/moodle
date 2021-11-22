@@ -11,8 +11,8 @@
             </a>
         </li>
         <li class="side-item">
-            <a class="side-link li-dict" href="/pages/student/dictionary.php">
-                <i class="now-ui-icons files_single-copy-04"></i> Dictionary
+            <a class="side-link li-dict" href="/pages/student/note-book.php">
+                <i class="now-ui-icons files_single-copy-04"></i> Note Book
             </a>
         </li>
         <li class="side-item">

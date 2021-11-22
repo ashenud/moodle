@@ -1,0 +1,3 @@
+python version - Python 3.7.6
+Run.py is a Flask a server file
+Summary.py is the summarization code

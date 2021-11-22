@@ -28,6 +28,12 @@ class User extends DB {
 
     public function register_student($first_name,$last_name,$dob,$gender,$mobile,$email,$address,$username,$password,$al_stream,$uni_stream,$ol_eng_result,$al_eng_result){
         
+        $grade_point = 1.1000;
+
+        if(($ol_eng_result == 1 || $ol_eng_result == 2) && ($al_eng_result == 1 || $al_eng_result == 2)) {
+            $grade_point = 2.0000;
+        }
+
         $all_query = true;
         $this->connection->autocommit(FALSE);
         
@@ -35,7 +41,7 @@ class User extends DB {
         $this->connection->query($sql1) ? null : $all_query = false;
         
         $user_id = $this->connection->insert_id;
-        $sql2 = "INSERT INTO tbl_students (user_id, first_name, last_name, dob, gender, mobile, email, address, al_stream, uni_stream, ol_eng_result, al_eng_result	) VALUES ('".$user_id."','".$first_name."','".$last_name."','".$dob."','".$gender."','".$mobile."','".$email."','".$address."','".$al_stream."','".$uni_stream."','".$ol_eng_result."','".$al_eng_result."')";
+        $sql2 = "INSERT INTO tbl_students (user_id, first_name, last_name, dob, gender, mobile, email, address, al_stream, uni_stream, ol_eng_result, al_eng_result, grade_point) VALUES ('".$user_id."','".$first_name."','".$last_name."','".$dob."','".$gender."','".$mobile."','".$email."','".$address."','".$al_stream."','".$uni_stream."','".$ol_eng_result."','".$al_eng_result."','".$grade_point."')";
         $this->connection->query($sql2) ? null : $all_query = false;
 
         if($all_query) {
@@ -84,6 +90,12 @@ class User extends DB {
             return false;
         }    
     
+    }
+
+    public function get_grade_point_value($user_id){
+        $sql = "SELECT * FROM tbl_students s WHERE s.user_id = '$user_id'";
+        $query = $this->connection->query($sql);
+        return $query->fetch_assoc();
     }
 
 }

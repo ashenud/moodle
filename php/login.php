@@ -35,7 +35,9 @@ if(isset($_POST['login'])) {
         if($auth['type_id'] == 1) {
             header('Location: /pages/lecturer/dashboard.php');
         }
-        else {            
+        else {     
+            $grade_point = $user->get_grade_point_value($auth['id']);
+            $_SESSION['grade_point'] = $grade_point['grade_point'];
             header('Location: /pages/student/dashboard.php');
         }
     }
