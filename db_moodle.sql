@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 23, 2021 at 03:33 PM
+-- Generation Time: Nov 23, 2021 at 11:41 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.9
 
@@ -132,14 +132,14 @@ CREATE TABLE `tbl_reminders` (
 --
 
 INSERT INTO `tbl_reminders` (`id`, `user_id`, `reminder`, `date`, `pusher_date`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 2, 'meeting 1', '2021-12-23 09:35:00', '2021-11-23 00:00:43', NULL, '2020-12-21 14:35:36', '2021-11-22 18:30:43'),
-(2, 2, 'meeting', '2021-12-25 19:48:00', '2021-11-23 00:06:43', NULL, '2020-12-22 08:48:54', '2021-11-22 18:36:43'),
-(3, 2, 'test tanscation', '2021-12-23 09:35:00', '2021-11-23 00:01:43', NULL, '2020-12-22 08:19:06', '2021-11-22 18:31:43'),
-(4, 2, 'meeting', '2021-12-25 19:19:00', '2021-11-23 00:05:46', NULL, '2020-12-22 08:19:06', '2021-11-22 18:35:46'),
-(5, 2, 'test tanscation', '2021-12-23 09:35:00', '2021-11-23 00:02:43', NULL, '2020-12-22 08:19:52', '2021-11-22 18:32:43'),
-(6, 2, 'meeting 6', '2021-12-24 19:19:00', '2021-11-23 00:03:44', NULL, '2020-12-22 08:19:52', '2021-11-22 18:33:44'),
-(7, 2, 'meeting 2', '2021-12-24 19:48:00', '2021-11-23 00:04:45', NULL, '2020-12-22 08:48:39', '2021-11-22 18:34:45'),
-(8, 2, 'meeting 4', '2021-12-31 19:48:00', '2021-11-23 00:07:43', NULL, '2020-12-22 08:48:28', '2021-11-22 18:37:43'),
+(1, 2, 'meeting 1', '2021-12-23 09:35:00', '2021-11-24 00:00:52', NULL, '2020-12-21 14:35:36', '2021-11-23 18:30:52'),
+(2, 2, 'meeting', '2021-12-25 19:48:00', '2021-11-24 00:06:58', NULL, '2020-12-22 08:48:54', '2021-11-23 18:36:58'),
+(3, 2, 'test tanscation', '2021-12-23 09:35:00', '2021-11-24 00:01:53', NULL, '2020-12-22 08:19:06', '2021-11-23 18:31:53'),
+(4, 2, 'meeting', '2021-12-25 19:19:00', '2021-11-24 00:05:57', NULL, '2020-12-22 08:19:06', '2021-11-23 18:35:57'),
+(5, 2, 'test tanscation', '2021-12-23 09:35:00', '2021-11-24 00:02:54', NULL, '2020-12-22 08:19:52', '2021-11-23 18:32:54'),
+(6, 2, 'meeting 6', '2021-12-24 19:19:00', '2021-11-24 00:03:55', NULL, '2020-12-22 08:19:52', '2021-11-23 18:33:55'),
+(7, 2, 'meeting 2', '2021-12-24 19:48:00', '2021-11-24 00:04:56', NULL, '2020-12-22 08:48:39', '2021-11-23 18:34:56'),
+(8, 2, 'meeting 4', '2021-12-31 19:48:00', '2021-11-24 00:07:59', NULL, '2020-12-22 08:48:28', '2021-11-23 18:37:59'),
 (43, 2, '00asd0142axcasdvfs', '2021-07-16 09:26:00', '2021-07-11 19:49:59', NULL, '2021-07-04 08:56:53', '2021-07-11 14:19:59'),
 (44, 2, 'asdasd', '2021-07-14 19:53:00', '2021-07-11 19:53:16', NULL, '2021-07-11 14:23:16', '2021-07-11 14:23:16');
 
@@ -314,6 +314,31 @@ INSERT INTO `tbl_users` (`id`, `first_name`, `last_name`, `gender`, `email`, `ty
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_user_study_plans`
+--
+
+CREATE TABLE `tbl_user_study_plans` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `plan_id` int(11) NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_user_study_plans`
+--
+
+INSERT INTO `tbl_user_study_plans` (`id`, `user_id`, `plan_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 2, 1, NULL, '2021-11-23 16:36:52', '2021-11-23 16:54:15'),
+(2, 2, 4, NULL, '2021-11-23 16:56:52', '2021-11-23 23:39:07'),
+(3, 2, 1, NULL, '2021-11-23 23:39:23', '2021-11-23 23:39:23'),
+(4, 2, 1, NULL, '2021-11-23 23:41:29', '2021-11-23 23:41:29');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_user_types`
 --
 
@@ -413,6 +438,12 @@ ALTER TABLE `tbl_users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_user_study_plans`
+--
+ALTER TABLE `tbl_user_study_plans`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_user_types`
 --
 ALTER TABLE `tbl_user_types`
@@ -476,6 +507,12 @@ ALTER TABLE `tbl_study_plans`
 --
 ALTER TABLE `tbl_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `tbl_user_study_plans`
+--
+ALTER TABLE `tbl_user_study_plans`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_user_types`

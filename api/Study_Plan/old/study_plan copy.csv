@@ -1,0 +1,100 @@
+Gender,Age,What time do you wake up in the morning?,What time do you have breakfast?,Are you doing a job?,"If you have a job, how much time do you spend on it?",How much time do you spend on education? ,What time do you have lunch?,What is your hobby?,How much time does it take?,What time do you have dinner? ,What Is Your University?,What is your Faculty?,What is your academic year?,What has been your GPA in the last years?,How many repeats did you have Last year? ,What time do you go to bed at night?,How long does it take for a university outdoor activity ?,How much time do you take for Lab Sessions and practical's?
+Female,28,5,7,Yes,2 hours,4 hours,13.3,Watching Movie,3 hours,21,NSBM Green University,School of Computing,Year 04,2.7,1,22,2 hours,2 hours
+Female,21,3,10,No,,5 hours,14,Playing,2 hours,22,CINEC Campus Sri Lanka,School of Computing,Year 03,3,5,22.3,3 hours,2 hours
+Male,22,4,7,Yes,5 hours,3 hours,12,other,1 hours,22.3,Horizon University,School of Law,Year 03,3.2,0,23.45,3 hours,6 hours
+Male,27,2,8,No,,7 hours,12.3,Watching Movie,4 hours,20,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 03,1.8,6,23,2 hours,5 hours
+Male,23,1,7.3,Yes,6 hours,1 hours,13.3,Reading,2 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 04,1,0,1,1 hours,4 hours
+Male,24,6,8.3,Yes,10 hours,2 hours,13.45,other,3 hours,19.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 03,3.8,6,2.3,5 hours,2 hours
+Male,26,8,10,No,,5 hours,15,Playing,2 hours,20.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 01,2.9,3,23.45,6 hours,3 hours
+Male,28,9,10.3,Yes,5 hours,5 hours,14.3,Reading,1 hours,20,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,1.87,9,22.3,2 hours,2 hours
+Male,30,4,8.3,No,,6 hours,15.3,other,3 hours,19.45,NSBM Green University,School of Computing,Year 03,2.63,5,21.3,3 hours,1 hours
+Female,24,3,6.45,No,,3 hours,14,other,4 hours,19.3,CINEC Campus Sri Lanka,School of Computing,Year 02,3.25,3,20,4 hours,3 hours
+Male,22,6,7.3,No,,2 hours,14.3,other,5 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 03,1.25,4,2.3,1 hours,8 hours
+Male,23,7,8.3,No,,10 hours,16,Watching Movie,3 hours,22.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 01,1.89,3,3,4 hours,7 hours
+Male,29,7,8,Yes,6 hours,2 hours,14.45,Watching Movie,2 hours,22,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,2.45,0,1.45,3 hours,6 hours
+Female,24,2,9,No,,4 hours,15,Playing,3 hours,21,NSBM Green University,School of Business,Year 03,3.65,2,1.3,1 hours,5 hours
+Male,22,5,10,No,,5 hours,15,Watching Movie,1 hours,21.45,CINEC Campus Sri Lanka,School of Engineering,Year 01,1.89,1,1.3,2 hours,2 hours
+Female,25,6,10.3,Yes,6 hours,1 hours,13.3,other,4 hours,22,NSBM Green University,School of Media Studies,Year 04,2.65,0,23,4 hours,3 hours
+Female,23,7,8.45,Yes,7 hours,1 hours,13.45,Reading,3 hours,20,General Sir John Kotelawala Defence University,School of Hospitality,Year 03,3.45,0,22.3,3 hours,4 hours
+Female,21,8,9.3,Yes,6 hours,2 hours,14.3,other,2 hours,20.3,NSBM Green University,School of Engineering,Year 02,2.4,4,21,5 hours,5 hours
+Male,20,9,10.45,No,,8 hours,15,other,3 hours,19.45,National Institute of Business Management,School of Business,Year 03,3.2,3,21.45,2 hours,6 hours
+Male,18,10,11.45,Yes,8 hours,1 hours,12.3,other,2 hours,19.3,ESOFT Metro Campus,School of Computing,Year 04,1.9,5,3,1 hours,8 hours
+Male,24,5,7.3,No,,5 hours,12.45,other,4 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,2.67,8,2,3 hours,7 hours
+Male,26,11.3,12.3,Yes,6 hours,2 hours,13,other,3 hours,21.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 04,2.35,5,23.45,4 hours,2 hours
+Female,24,3,7.3,No,,10 hours,14.3,Playing,5 hours,21,NSBM Green University,School of Business,Year 02,2.32,4,21.3,1 hours,6 hours
+Female,21,5,7,Yes,2 hours,6 hours,13,Reading,2 hours,23,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 01,3.24,0,22,2 hours,3 hours
+Female,28,5.3,6.3,No,,7 hours,15.3,Watching Movie,3 hours,23.3,NSBM Green University,School of Business,Year 02,2,2,1,3 hours,4 hours
+Female,30,6.3,8,Yes,6 hours,2 hours,12,Playing,4 hours,23,Horizon University,School of Engineering,Year 03,3.64,3,2,5 hours,2 hours
+Female,27,7,8,Yes,8 hours,3 hours,12.3,other,2 hours,22,National Institute of Business Management,School of Media Studies,Year 04,1.75,4,21,4 hours,3 hours
+Female,27,8.3,10,No,,5 hours,13.35,Playing,3 hours,22.3,National Institute of Business Management,School of Media Studies,Year 03,1.6,5,22.3,3 hours,5 hours
+Female,24,7,9,No,,6 hours,15,Watching Movie,2 hours,22,General Sir John Kotelawala Defence University,School of Architecture,Year 03,2.3,6,22.45,2 hours,6 hours
+Female,26,5,6.3,No,,8 hours,15.3,Reading,3 hours,20,ESOFT Metro Campus,School of Law,Year 04,1.45,4,23,1 hours,7 hours
+Male,23,6,7.3,No,,10 hours,14.3,Playing,5 hours,20.3,CINEC Campus Sri Lanka,School of Law,Year 04,2.36,3,21.45,2 hours,8 hours
+Male,21,5.3,7.45,Yes,2 hours,3 hours,14,Reading,2 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 01,2.89,1,21.3,4 hours,2 hours
+Male,22,6.45,8,Yes,2 hours,4 hours,13,Reading,3 hours,19.3,NSBM Green University,School of Business,Year 04,2.75,3,1.3,3 hours,1 hours
+Female,20,4.3,8.3,Yes,10 hours,1 hours,12.3,other,2 hours,20,Sri Lanka Institute of Information Technology (SLIIT),School of Business,Year 03,1.85,3,2,1 hours,2 hours
+Female,20,5.45,7,Yes,4 hours,6 hours,12.45,Playing,2 hours,20.3,Sri Lanka Institute of Information Technology (SLIIT),School of Business,Year 02,2.36,1,2.3,2 hours,3 hours
+Male,25,6,8,Yes,2 hours,3 hours,13,Watching Movie,3 hours,22,Horizon University,School of Business,Year 02,1.47,2,3,3 hours,5 hours
+Female,26,3.15,6.3,No,,10 hours,13.3,Reading,1 hours,22.3,NSBM Green University,School of Business,Year 01,3.21,8,3.3,1 hours,6 hours
+Male,24,3,7,Yes,8 hours,4 hours,14,Reading,5 hours,19.3,General Sir John Kotelawala Defence University,School of Business,Year 02,3.68,2,4,2 hours,4 hours
+Female,25,5.45,9,No,,9 hours,14.3,Reading,3 hours,19.45,ESOFT Metro Campus,School of Business,Year 01,2.65,1,20.45,4 hours,2 hours
+Female,26,6,7,Yes,10 hours,2 hours,12.3,Watching Movie,4 hours,22,National Institute of Business Management,School of Media Studies,Year 02,1.96,3,20.3,3 hours,7 hours
+Male,28,7,8,No,,5 hours,13,other,6 hours,21,CINEC Campus Sri Lanka,School of Engineering,Year 03,3.24,5,21.3,1 hours,8 hours
+Female,23,9,10.3,No,,3 hours,13.3,Playing,3 hours,21.3,Sri Lanka Institute of Information Technology (SLIIT),School of Engineering,Year 04,2.3,5,22,2 hours,3 hours
+Female,22,7,10,No,,7 hours,14.3,Playing,2 hours,20.3,ESOFT Metro Campus,School of Media Studies,Year 03,2.65,7,21,4 hours,2 hours
+Female,24,8,10.3,Yes,2 hours,2 hours,14.45,Watching Movie,4 hours,19,CINEC Campus Sri Lanka,School of Business,Year 02,1.65,5,23,3 hours,5 hours
+Female,18,10,11,Yes,4 hours,4 hours,13.3,other,5 hours,19.3,ESOFT Metro Campus,School of Media Studies,Year 03,3.1,4,22.5,2 hours,1 hours
+Male,19,10.3,11,Yes,5 hours,6 hours,12,Playing,3 hours,18.3,Sri Lanka Institute of Information Technology (SLIIT),School of Business,Year 01,3.7,8,3,4 hours,2 hours
+Male,28,11,12,Yes,6 hours,4 hours,13.45,other,2 hours,23,ESOFT Metro Campus,School of Media Studies,Year 04,2.68,3,23,5 hours,3 hours
+Male,30,8,9,No,,7 hours,13,Playing,2 hours,22.3,General Sir John Kotelawala Defence University,School of Engineering,Year 02,1.98,6,2,3 hours,4 hours
+Male,24,5,7,No,,8 hours,14.45,Watching Movie,4 hours,22,General Sir John Kotelawala Defence University,School of Computing,Year 03,1.85,5,1,2 hours,8 hours
+Male,23,6,7,No,,10 hours,15,Watching Movie,5 hours,21,NSBM Green University,School of Architecture,Year 03,2.36,6,1.3,1 hours,6 hours
+Male,22,7,8.3,No,,6 hours,12.3,other,2 hours,20,Horizon University,School of Computing,Year 04,3.4,5,2.3,4 hours,5 hours
+Male,26,3.3,7.3,No,,8 hours,13.35,Playing,3 hours,20.3,Horizon University,School of Computing,Year 04,2.3,1,3,5 hours,2 hours
+Female,29,4.3,7,No,,10 hours,14.3,other,6 hours,20.45,Sri Lanka Institute of Information Technology (SLIIT),School of Law,Year 04,3.1,2,23,2 hours,4 hours
+Male,30,6,7.45,Yes,10 hours,2 hours,14,Watching Movie,2 hours,19.3,Sri Lanka Institute of Information Technology (SLIIT),School of Media Studies,Year 01,1.95,4,20.15,2 hours,2 hours
+Male,27,2.3,6,No,,4 hours,15,Watching Movie,1 hours,19,NSBM Green University,School of Engineering,Year 01,2.43,4,1.3,1 hours,3 hours
+Male,28,10.3,11.3,Yes,8 hours,2 hours,15.3,other,2 hours,19.3,Sri Lanka Institute of Information Technology (SLIIT),School of Engineering,Year 01,2.8,0,3,3 hours,5 hours
+Male,25,5,6.3,Yes,3 hours,6 hours,12.3,Watching Movie,3 hours,20,Horizon University,School of Business,Year 02,2.35,0,20.3,4 hours,6 hours
+Female,23,6,7.3,Yes,8 hours,1 hours,12,Playing,2 hours,20.3,National Institute of Business Management,School of Engineering,Year 03,3.4,0,20,6 hours,4 hours
+Male,22,7,8.3,No,,5 hours,13,other,1 hours,22,General Sir John Kotelawala Defence University,School of Media Studies,Year 02,1.98,0,21,2 hours,5 hours
+Female,21,5,6.45,Yes,2 hours,6 hours,13.3,Playing,5 hours,21,General Sir John Kotelawala Defence University,School of Computing,Year 03,1.36,3,22,3 hours,2 hours
+Female,24,4,5.3,Yes,4 hours,2 hours,14.3,Playing,2 hours,21,CINEC Campus Sri Lanka,School of Architecture,Year 04,2.65,4,1.3,1 hours,4 hours
+Male,25,3,7,Yes,6 hours,3 hours,14,Reading,2 hours,20,Rajarata university,School of Business,Year 02,2.7,0,23,2 hours,3 hours
+Female,23,3,6,No,,6 hours,15,Playing,3 hours,20.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,2.38,3,19,4 hours,5 hours
+Male,20,4,6.3,Yes,6 hours,2 hours,13,other,1 hours,19.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 03,3.25,5,19.3,1 hours,6 hours
+Female,21,5,6.45,No,,8 hours,13.3,Playing,2 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,3.6,4,20.3,2 hours,7 hours
+Male,20,6,8,Yes,2 hours,2 hours,15,Watching Movie,4 hours,18.3,NSBM Green University,School of Computing,Year 03,3.8,4,19.45,3 hours,8 hours
+Female,23,2,8.3,No,,3 hours,14.3,Watching Movie,5 hours,21,NSBM Green University,School of Computing,Year 02,1.9,3,21,2 hours,2 hours
+Male,25,1,6,Yes,8 hours,1 hours,12.3,Watching Movie,2 hours,20.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 04,1.36,6,22,4 hours,1 hours
+Male,26,1.3,7,Yes,10 hours,2 hours,15.3,Watching Movie,2 hours,20,National Institute of Business Management,School of Business,Year 03,3.2,2,3.45,5 hours,3 hours
+Male,28,8,10,No,,6 hours,14.3,Playing,3 hours,21,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,2.6,7,3,6 hours,4 hours
+Male,29,9,10.3,Yes,10 hours,3 hours,14.45,Watching Movie,4 hours,22,NSBM Green University,School of Computing,Year 04,2.47,3,1.3,2 hours,5 hours
+Male,30,2.45,7.3,No,,7 hours,13.3,Playing,2 hours,22.3,Sri Lanka Institute of Information Technology (SLIIT),School of Engineering,Year 02,2.13,2,2.45,1 hours,3 hours
+Male,21,3,7,No,,6 hours,13,Playing,3 hours,21.3,Sri Lanka Institute of Information Technology (SLIIT),School of Engineering,Year 02,3.69,2,23,3 hours,6 hours
+Male,22,4,6,Yes,6 hours,2 hours,14,Reading,2 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,3.45,1,22,4 hours,4 hours
+Male,24,8,10,No,,3 hours,12.3,Playing,2 hours,19,NSBM Green University,School of Business,Year 03,2.14,2,21.3,2 hours,7 hours
+Female,27,9,10.3,No,,5 hours,13,Playing,4 hours,20,NSBM Green University,School of Business,Year 02,1.93,4,1.3,5 hours,6 hours
+Male,28,5,6.45,Yes,4 hours,8 hours,13.3,Watching Movie,2 hours,23,NSBM Green University,School of Computing,Year 02,3.65,2,2,1 hours,3 hours
+Female,27,7,8.45,Yes,6 hours,2 hours,14,Reading,3 hours,21.3,Horizon University,School of Business,Year 02,2.75,2,2.3,3 hours,2 hours
+Female,24,7.3,8,No,,10 hours,15,Playing,4 hours,20.3,NSBM Green University,School of Computing,Year 03,2.89,4,1.3,2 hours,1 hours
+Male,25,7.45,8.3,No,,9 hours,14.3,other,5 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 04,1.98,3,1.45,5 hours,5 hours
+Male,23,6.45,9,Yes,6 hours,2 hours,13,other,3 hours,20,CINEC Campus Sri Lanka,School of Architecture,Year 03,3.4,4,2.45,2 hours,4 hours
+Female,21,3,8,Yes,3 hours,6 hours,13,Playing,2 hours,21,General Sir John Kotelawala Defence University,School of Architecture,Year 02,2.65,6,3,1 hours,2 hours
+Female,20,4.3,10,Yes,8 hours,1 hours,12,Playing,3 hours,21.3,ESOFT Metro Campus,School of Hospitality,Year 02,1.96,6,23.3,2 hours,3 hours
+Female,22,5,6.3,Yes,6 hours,2 hours,12.3,other,2 hours,22,National Institute of Business Management,School of Law,Year 03,2.34,8,21.3,2 hours,6 hours
+Female,26,6,7,Yes,2 hours,3 hours,14.3,Playing,2 hours,23,NSBM Green University,School of Engineering,Year 02,3.21,4,20.5,3 hours,1 hours
+Male,28,3.3,7.3,Yes,7 hours,1 hours,14,Playing,3 hours,20,Horizon University,School of Computing,Year 03,2.95,1,19,4 hours,2 hours
+Male,29,2.45,6.3,No,,2 hours,15,other,1 hours,20.3,NSBM Green University,School of Computing,Year 02,3.2,4,20,2 hours,4 hours
+Male,30,8,9,No,,6 hours,15.3,other,4 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 04,1.96,3,22,5 hours,5 hours
+Male,24,9.3,10,Yes,5 hours,4 hours,13.3,Watching Movie,2 hours,19.3,NSBM Green University,School of Engineering,Year 03,2.36,2,21.3,3 hours,6 hours
+Female,25,10,10.3,No,,5 hours,13.4,Reading,3 hours,23,National Institute of Business Management,School of Business,Year 03,3.2,3,20.3,2 hours,2 hours
+Female,26,3.45,7,No,,3 hours,14.3,Playing,3 hours,22.3,NSBM Green University,School of Media Studies,Year 04,3.65,7,21.3,4 hours,8 hours
+Male,21,5,6.45,No,,7 hours,14,Watching Movie,2 hours,20.3,ESOFT Metro Campus,School of Engineering,Year 04,1.78,5,22,2 hours,2 hours
+Female,20,6.3,7,No,,10 hours,14.45,other,2 hours,21,CINEC Campus Sri Lanka,School of Business,Year 01,3.1,4,21,3 hours,4 hours
+Female,21,4.5,8,Yes,2 hours,3 hours,13.3,Watching Movie,4 hours,21.3,NSBM Green University,School of Computing,Year 04,3.65,1,23,1 hours,5 hours
+Male,27,7.45,8.45,Yes,6 hours,2 hours,15.3,other,3 hours,20,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 01,2.78,0,20,2 hours,6 hours
+Female,23,10,11,No,,7 hours,13,Playing,4 hours,20.3,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 03,2.96,7,1.45,5 hours,2 hours
+Female,30,8,9,No,,3 hours,13.3,Playing,5 hours,19,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,3.6,5,2,2 hours,2 hours
+Male,19,9,10,Yes,8 hours,1 hours,12.3,Reading,3 hours,19.3,NSBM Green University,School of Business,Year 02,1.75,2,3,1 hours,4 hours
+Male,25,7,9,No,,3 hours,14,Watching Movie,2 hours,22,Sri Lanka Institute of Information Technology (SLIIT),School of Computing,Year 02,3.24,4,3.3,2 hours,3 hours

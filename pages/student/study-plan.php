@@ -354,6 +354,24 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12-6 mb-2">
+                        <div class="card card-custom">
+                            <div class="card-header mt-2 mb-3">
+                                <h5 class="font-weight-bold">Current Study Plan</h5>
+                            </div>
+                            <div class="card-body">
+                                <table class="table note-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center"><b>Time</b></th>
+                                            <th class="text-center"><b>Work</b></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="plan-tbody"> </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -385,6 +403,7 @@
 
         $( document ).ready(function() {
             $('.side-link.li-stypl').addClass('active');
+            get_current_study_plan();
         });
 
         function submit_data() {
@@ -398,48 +417,76 @@
                 confirmButtonText: 'Yes'
             }).then((result) => {
                 if (result.value) {
-
-
                     submitForm();
-                    
-                    swal("Good Job !", 'Successfully uploaded', 'success');
                 }
             });
         }
 
         function submitForm() {
             var formData = $("form").serializeArray();
-            let json_data = {};
+            let json_string = `{`;
             $.each( formData, function( key, question ) {
-                json_data[question.name] = question.value;
+                json_string += `"${question.name}":"${question.value}",`;
             });
-            console.log(JSON.stringify(json_data));
+            json_string = json_string.replace(/,\s*$/, "");
+            json_string += `}`; 
+
+            // console.log((json_string));
+            get_study_plan_for_form_data(json_string);
         }
 
-        function submitOld() {
-            var formData = $("form").serializeArray();
-            let csv = "data:text/csv;charset=utf-8,"; // accept data as CSV
-
-            formData.forEach(function(item) {
-              csv += item.value + ";"; // concat form value on csv var and add ; to create columns (you can change to , if want)
+        function get_study_plan_for_form_data(json_data) {
+            $.ajax({
+                url: 'http://192.168.20.34:5000/study_plan',
+                type: 'POST',
+                dataType: 'JSON',
+                contentType: 'application/json',
+                crossDomain: true,
+                data: (json_data),
+                success: function (response) {
+                    // console.log(response);
+                    if(response.respond) {
+                        store_study_plan(response.respond);
+                    }
+                }
             });
-
-            var encodedUri = encodeURI(csv);
-
-            console.log(encodedUri);
-
-            // if you want to download
-            var downloadLink = document.createElement("a");
-            downloadLink.setAttribute("download", "FILENAME.csv");
-            downloadLink.setAttribute("href", encodedUri);
-            document.body.appendChild(downloadLink); // Required for FF
-            downloadLink.click();
-            downloadLink.remove();
         }
 
-        function findRandom() {
-            var random = Math.floor(Math.random() * 5) //Finds number between 0 - max
-            return random;
+        function store_study_plan(plan_id) {
+            $.ajax({
+                url: '/pages/student/php/study-plan-insert.php',
+                type: 'POST',
+                dataType: 'JSON',
+                data: {
+                    plan_id : plan_id,
+                },
+                success: function (response) {
+                    // console.log(response)                    
+                    swal("Good Job !", 'Get Study Plan Successfull', 'success');
+                    get_current_study_plan();
+                }
+            });
+        }
+
+        function get_current_study_plan() {
+            $.ajax({
+                url: '/pages/student/php/study-plan-get.php',
+                type: 'POST',
+                dataType: 'JSON',
+                success: function (response) {
+                    console.log(response)
+                    $('#plan-tbody').empty();
+                    var tboay = ""
+                    $.each( response.data, function( key, value ) {
+                        // console.log(value)
+                        tboay +=    `<tr>
+                                        <td>${value.time}</td>
+                                        <td>${value.description}</td>
+                                    </tr>`
+                    });
+                    $('#plan-tbody').append(tboay);
+                }
+            });
         }
 
     </script>      
